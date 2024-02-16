@@ -28,15 +28,6 @@ namespace Hospital.MVC.Controllers
 			{
 				return RedirectToAction("login", "Account");
 			}
-
-
-
-
-
-
-           
-
-
             var viewModel = new Business.ViewModels.AppointmentViewModel
             {
 				AppUserId = user.Id

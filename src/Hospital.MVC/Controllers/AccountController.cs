@@ -88,6 +88,7 @@ namespace Hospital.MVC.Controllers
         }
         public async Task<IActionResult> Profile()
         {
+            ViewBag.Doctors=_context.Doctors.ToList();
             AppUser appUser = null;
 
             if (HttpContext.User.Identity.IsAuthenticated)
