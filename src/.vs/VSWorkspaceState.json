@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Hospital.Business",
+    "\\Hospital.MVC",
+    "\\Hospital.MVC\\Areas",
+    "\\Hospital.MVC\\Areas\\manage",
+    "\\Hospital.MVC\\Areas\\manage\\Controllers",
+    "\\Hospital.MVC\\Controllers"
+  ],
+  "SelectedNode": "\\Hospital.MVC\\Areas\\manage\\Controllers\\ProfessionController.cs",
+  "PreviewInSolutionExplorer": false
+}

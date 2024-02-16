@@ -1,0 +1,109 @@
+﻿@model AppointmentViewModel
+<!-- Inne Page Banner Area Start Here -->
+<section class="inner-page-banner bg-common inner-page-top-margin" data-bg-image="img/figure/figure2.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumbs-area">
+                    <h1>Appointment Form</h1>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>Form</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Inne Page Banner Area End Here -->
+<!-- Gallery Area Start Here -->
+<section class="appointment-wrap-layout1 bg-light-accent100">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-xl-6">
+                <div class="appointment-box-layout1">
+                    <h2 class="title title-bar-primary2">Make an Appointment</h2>
+                    <p>
+                        Efficiently myocardinate market-driven innovation via open-source alignments.
+                        Dramatically engage
+                        porescently.
+                    </p>
+                    <form method="post" asp-action="create" asp-controller="appointment">
+                        <div class="row gutters-15">
+                            <div class="col-12 form-group">
+                                <select class="select2" asp-for="Professionnid" required>
+                                    <option value="">Select Department *</option>
+                                    @foreach (var profession in ViewBag.Professions)
+                                    {
+                                        <option value="@profession.Id">@profession.Name</option>
+                                    }
+                                    
+                                </select>
+                                <span asp-validation-for="Professionnid" class="text-danger"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-12 form-group">
+                                <select class="select2" asp-for="DocotrId" required>
+                                    <option value="">Choose Doctor by Name *</option>
+                                    @foreach (var doctor in ViewBag.Doctors)
+                                    {
+                                        <option value="@doctor.Id">@doctor.Fullname</option>
+                                    }
+
+                                </select>
+                                <span asp-validation-for="DocotrId" class="text-danger"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-12 form-group">
+                                <input asp-for="FullName" placeholder="Patient Name *" class="form-control" required />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input asp-for="Phone" placeholder="Phone *" class="form-control" required />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input asp-for="Email" placeholder="E-mail *" class="form-control" required />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <i class="far fa-calendar-alt"></i>
+                                <input asp-for="AppointmentDate" type="date" class="form-control" placeholder="Appointment Date *" required />
+                                <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <i class="far fa-clock"></i>
+                                <input asp-for="AppointmentStartTime" type="time" class="form-control" placeholder="AppointmentStartTime *" required />
+                                <span asp-validation-for="AppointmentStartTime" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <i class="far fa-clock"></i>
+                                <input asp-for="AppointmentEndTime" type="time" class="form-control" placeholder="AppointmentEndTime *" required />
+                                <span asp-validation-for="AppointmentEndTime" class="text-danger"></span>
+                            </div>
+                            <div class="col-12 form-group">
+                                <textarea asp-for="Note" placeholder="Type Appointment Note" class="textarea form-control" rows="5" cols="20" required></textarea>
+                                <span asp-validation-for="Note" class="text-danger"></span>
+                            </div>
+                            <div class="col-12 form-group text-center">
+                                <button type="submit" class="item-btn">Make an Appointment</button>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                
+                            </div>
+
+                        </div>
+                      
+                    </form>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="appointment-banner">
+                    <img src="~/img/figure/figure2.png" alt="appointment" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Gallery Area End Here -->

@@ -1,0 +1,65 @@
+﻿﻿
+@model List<Doctor>
+@{
+    var counter = 0;
+}
+
+<style>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .img {
+        width: 30%;
+    }
+</style>
+<div class="container-fluid">
+    <div class="header">
+        <h1 class="title">Professions Table</h1>
+        <a class="btn btn-primary" asp-action="create" asp-controller="doctor">Create</a>
+    </div>
+
+    <table class="table table-striped shadow">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Profession</th>
+                <th scope="col">Image</th>
+             
+
+
+
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var doctor in Model)
+            {
+                counter++;
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@doctor.Fullname</td>
+                    <td>@doctor.Description</td>
+                    <td>@doctor.Profession.Name</td>
+                    <td><img src="~/uploads/doctors/@doctor.ImageUrl" style="max-width:120px" /></td>
+                   
+                   
+
+
+
+                    <td>
+                        <a class="btn btn-warning" asp-action="update" asp-controller="doctor" asp-route-id="@doctor.Id">Update</a>
+
+                        <a class="btn btn-danger" asp-action="Delete" asp-controller="doctor" asp-route-id="@doctor.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
