@@ -13,8 +13,10 @@ namespace Hospital.Core.Models
         [StringLength(maximumLength: 100,MinimumLength =6)]
         public string FullName { get; set; }
 
-       
 
+      
         public List<Appointment>? Appointments { get; set; }
+
+       
     }
 }

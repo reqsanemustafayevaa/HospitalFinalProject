@@ -28,7 +28,7 @@ namespace Hospital.MVC.Controllers
 			{
 				return RedirectToAction("login", "Account");
 			}
-            var viewModel = new Business.ViewModels.AppointmentViewModel
+            var viewModel = new AppointmentViewModel
             {
 				AppUserId = user.Id
 			};
@@ -112,7 +112,7 @@ namespace Hospital.MVC.Controllers
 
 			return RedirectToAction("profile", "account");
 		}
-		private async Task<bool> IsAppointmentValid(Business.ViewModels.AppointmentViewModel model)
+		private async Task<bool> IsAppointmentValid(AppointmentViewModel model)
 		{
 			var doctorSchedule = await _context.WorkSchedules
 		.FirstOrDefaultAsync(ws => ws.DoctorId == model.DocotrId && ws.Day == model.AppointmentDate.DayOfWeek);

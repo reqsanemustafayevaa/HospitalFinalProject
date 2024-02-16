@@ -1,4 +1,5 @@
-﻿using Hospital.Core.Models;
+﻿using Hospital.Business.ViewModels;
+using Hospital.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

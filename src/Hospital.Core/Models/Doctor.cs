@@ -42,6 +42,7 @@ namespace Hospital.Core.Models
         public Profession? Profession { get; set; }
         public int ProfessionId { get; set; }
 
+     
         public List<Appointment>? Appointments { get; set; }
 
         public List<WorkSchedule>? WorkSchedules { get; set; }

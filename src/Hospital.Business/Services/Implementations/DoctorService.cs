@@ -8,6 +8,8 @@ using Hospital.Core.Repositories.Interfaces;
 using Hospital.Data.DAL;
 using Hospital.Data.Repositories.Implementations;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -23,21 +25,27 @@ namespace Hospital.Business.Services.Implementations
         private readonly IWebHostEnvironment _env;
         private readonly IProfessionRepository _professionRepository;
         private readonly IWorkScheduleRepository _workScheduleRepository;
+        private readonly UserManager<AppUser> _userManager;
 
         public DoctorService(IDoctorRepository doctorRepository
                             ,IWebHostEnvironment env
                             ,IProfessionRepository professionRepository
                             ,IWorkScheduleRepository workScheduleRepository
-                            
+                            ,UserManager<AppUser> userManager
                            )
         {
             _doctorRepository = doctorRepository;
            _env = env;
           _professionRepository = professionRepository;
            _workScheduleRepository = workScheduleRepository;
+           _userManager = userManager;
         }
         public async Task CreateAsync(Doctor doctor)
         {
+            
+
+
+
             if (doctor == null)
             {
                 throw new EntityNotFoundException();
@@ -62,10 +70,11 @@ namespace Hospital.Business.Services.Implementations
             {
                 throw new ImageRequiredException("ImageFile", "Image must be choosed!");
             }
-
+           
             doctor.IsDeleted = false;
             doctor.CreateDate = DateTime.UtcNow;
             doctor.UpdateDate = DateTime.UtcNow;
+            
             await _doctorRepository.createAsync(doctor);
             await _doctorRepository.CommitAsync();
 

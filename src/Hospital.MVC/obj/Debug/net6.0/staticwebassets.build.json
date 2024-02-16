@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Umb1VziwEOysdyi/RtVReyywRBv21oSzAJwL+ThGioE=",
+  "Hash": "7VW0lppgLZX4WlekNSR3CjKWavpOVKx/yxRrwNyqmuw=",
   "Source": "Hospital.MVC",
   "BasePath": "_content/Hospital.MVC",
   "Mode": "Default",
@@ -38403,6 +38403,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\1ce43f1d-3bac-4f39-ba5b-d4e5f10c1229team-6.jpg"
     },
     {
+      "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\3994c944-f62a-431a-9c68-9fa6c4eb5a93team-2.jpg",
+      "SourceId": "Hospital.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\",
+      "BasePath": "_content/Hospital.MVC",
+      "RelativePath": "uploads/doctors/3994c944-f62a-431a-9c68-9fa6c4eb5a93team-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\3994c944-f62a-431a-9c68-9fa6c4eb5a93team-2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\42b5ff31-c0e1-44d3-95ce-fd863e03bc71team-6.jpg",
       "SourceId": "Hospital.MVC",
       "SourceType": "Discovered",
@@ -38420,6 +38437,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\42b5ff31-c0e1-44d3-95ce-fd863e03bc71team-6.jpg"
     },
     {
+      "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4506fbb6-b203-4195-aad3-7915c2da7650team-6.jpg",
+      "SourceId": "Hospital.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\",
+      "BasePath": "_content/Hospital.MVC",
+      "RelativePath": "uploads/doctors/4506fbb6-b203-4195-aad3-7915c2da7650team-6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\4506fbb6-b203-4195-aad3-7915c2da7650team-6.jpg"
+    },
+    {
       "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4efd4eed-9045-4738-a62e-c654933219e0team-2.jpg",
       "SourceId": "Hospital.MVC",
       "SourceType": "Discovered",
@@ -38435,6 +38469,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\4efd4eed-9045-4738-a62e-c654933219e0team-2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4fd8bae6-2caf-47bc-9111-28b73b411123team-6.jpg",
+      "SourceId": "Hospital.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\",
+      "BasePath": "_content/Hospital.MVC",
+      "RelativePath": "uploads/doctors/4fd8bae6-2caf-47bc-9111-28b73b411123team-6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\4fd8bae6-2caf-47bc-9111-28b73b411123team-6.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\734ef75c-8cc1-433e-ae6c-bf6c956eabb1team-6.jpg",
@@ -38590,6 +38641,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\b2889abe-3b70-4b33-ab86-bf933e514f87team-6.jpg"
     },
     {
+      "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\c93a0b63-97ba-41e0-8e33-5bd47a387203team-2.jpg",
+      "SourceId": "Hospital.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\",
+      "BasePath": "_content/Hospital.MVC",
+      "RelativePath": "uploads/doctors/c93a0b63-97ba-41e0-8e33-5bd47a387203team-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\c93a0b63-97ba-41e0-8e33-5bd47a387203team-2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\caae5237-3ba5-4180-b5e8-bf41e5b8e2d1team-6.jpg",
       "SourceId": "Hospital.MVC",
       "SourceType": "Discovered",
@@ -38605,6 +38673,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\caae5237-3ba5-4180-b5e8-bf41e5b8e2d1team-6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\cab5049c-2b77-42b3-977c-7d050326a208team-6.jpg",
+      "SourceId": "Hospital.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\",
+      "BasePath": "_content/Hospital.MVC",
+      "RelativePath": "uploads/doctors/cab5049c-2b77-42b3-977c-7d050326a208team-6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\cab5049c-2b77-42b3-977c-7d050326a208team-6.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\vendor\\noUiSlider\\nouislider.min.css",
