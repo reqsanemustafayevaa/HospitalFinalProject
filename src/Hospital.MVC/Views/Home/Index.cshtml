@@ -87,10 +87,10 @@
             </div>
             <div class="about-box-layout2 order-xl-3 col-xl-4 col-lg-7 col-12">
                 <ul>
-                    <li><a href="appointment.html"><i class="far fa-calendar-alt"></i>Request Appoinment</a></li>
+                    <li><a asp-action="create" asp-controller="appointment"><i class="far fa-calendar-alt"></i>Request Appoinment</a></li>
+                    <div style="margin-bottom: 100px;"></div>
                     <li><a href="doctors1.html"><i class="far fa-user"></i>Find Doctors</a></li>
-                    <li><a href="appointment.html"><i class="fas fa-map-marker-alt"></i>Find Locations</a></li>
-                    <li><a href="appointment.html"><i class="fas fa-phone"></i>Emergency Contact</a></li>
+                   
                 </ul>
             </div>
             <div class="about-box-layout2 order-xl-1 col-xl-3 col-lg-5 col-12">
@@ -126,37 +126,21 @@
              data-r-medium-nav="false" data-r-medium-dots="false" data-r-large="4" data-r-large-nav="false"
              data-r-large-dots="false" data-r-extra-large="4" data-r-extra-large-nav="false"
              data-r-extra-large-dots="false">
-            <div class="departments-box-layout2">
-                <span class="departments-sl">01.</span>
+            @foreach(var profession in Model.Professions)
+            {
+                <div class="departments-box-layout2">
+                    <span class="departments-sl">*</span>
 
 
 
-                <div class="item-icon"><i class="flaticon-medical"></i></div>
-                <h3 class="item-title"><a href="#">Dental Care</a></h3>
-                <p>Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.</p>
-                <a class="item-btn" href="#">READ MORE<i class="fas fa-long-arrow-alt-right"></i></a>
-            </div>
-            <div class="departments-box-layout2">
-                <span class="departments-sl">02.</span>
-                <div class="item-icon"><i class="flaticon-pills"></i></div>
-                <h3 class="item-title"><a href="#">Medicine</a></h3>
-                <p>Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.</p>
-                <a class="item-btn" href="#">READ MORE<i class="fas fa-long-arrow-alt-right"></i></a>
-            </div>
-            <div class="departments-box-layout2">
-                <span class="departments-sl">03.</span>
-                <div class="item-icon"><i class="flaticon-medical-5"></i></div>
-                <h3 class="item-title"><a href="#">Cardeology</a></h3>
-                <p>Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.</p>
-                <a class="item-btn" href="#">READ MORE<i class="fas fa-long-arrow-alt-right"></i></a>
-            </div>
-            <div class="departments-box-layout2">
-                <span class="departments-sl">04.</span>
-                <div class="item-icon"><i class="flaticon-human-hip"></i></div>
-                <h3 class="item-title"><a href="#">Orthopedic</a></h3>
-                <p>Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.</p>
-                <a class="item-btn" href="#">READ MORE<i class="fas fa-long-arrow-alt-right"></i></a>
-            </div>
+                    <div class="item-icon"><i class="flaticon-pills"></i></div>
+                    <h3 class="item-title"><a href="#">@profession.Name</a></h3>
+                    <p>@profession.Description</p>
+                   
+                </div>
+            }
+           
+
         </div>
     </div>
 </section>

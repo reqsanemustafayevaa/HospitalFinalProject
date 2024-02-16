@@ -74,3 +74,22 @@ C:\Users\User\Masaüstü\HospitalFinal\Hospital Management System\src\Hospital.B
 C:\Users\User\Masaüstü\HospitalFinal\Hospital Management System\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.pdb
 C:\Users\User\Masaüstü\HospitalFinal\Hospital Management System\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.genruntimeconfig.cache
 C:\Users\User\Masaüstü\HospitalFinal\Hospital Management System\src\Hospital.Business\obj\Debug\net6.0\ref\Hospital.Business.dll
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\bin\Debug\net6.0\Hospital.Business.deps.json
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\bin\Debug\net6.0\Hospital.Business.runtimeconfig.json
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\bin\Debug\net6.0\Hospital.Business.dll
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\bin\Debug\net6.0\Hospital.Business.pdb
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\bin\Debug\net6.0\Hospital.Core.dll
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\bin\Debug\net6.0\Hospital.Data.dll
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\bin\Debug\net6.0\Hospital.Data.pdb
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\bin\Debug\net6.0\Hospital.Core.pdb
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.csproj.AssemblyReference.cache
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.AssemblyInfoInputs.cache
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.AssemblyInfo.cs
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.csproj.CoreCompileInputs.cache
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.csproj.CopyComplete
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.dll
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\refint\Hospital.Business.dll
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.pdb
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\Hospital.Business.genruntimeconfig.cache
+C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.Business\obj\Debug\net6.0\ref\Hospital.Business.dll

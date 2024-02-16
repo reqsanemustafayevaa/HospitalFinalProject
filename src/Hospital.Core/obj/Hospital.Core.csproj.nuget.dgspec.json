@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Masaüstü\\HospitalFinal\\Hospital Management System\\src\\Hospital.Core\\Hospital.Core.csproj": {}
+    "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.Core\\Hospital.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Masaüstü\\HospitalFinal\\Hospital Management System\\src\\Hospital.Core\\Hospital.Core.csproj": {
+    "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.Core\\Hospital.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Masaüstü\\HospitalFinal\\Hospital Management System\\src\\Hospital.Core\\Hospital.Core.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.Core\\Hospital.Core.csproj",
         "projectName": "Hospital.Core",
-        "projectPath": "C:\\Users\\User\\Masaüstü\\HospitalFinal\\Hospital Management System\\src\\Hospital.Core\\Hospital.Core.csproj",
+        "projectPath": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.Core\\Hospital.Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Masaüstü\\HospitalFinal\\Hospital Management System\\src\\Hospital.Core\\obj\\",
+        "outputPath": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
