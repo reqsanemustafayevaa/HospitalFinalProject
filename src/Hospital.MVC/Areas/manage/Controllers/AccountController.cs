@@ -24,9 +24,11 @@ namespace Hospital.MVC.Areas.manage.Controllers
         //    var role1 = new IdentityRole("SuperAdmin");
         //    var role2 = new IdentityRole("Admin");
         //    var role3 = new IdentityRole("user");
+        //    var role4 = new IdentityRole("Doctor");
         //    await _roleManager.CreateAsync(role1);
         //    await _roleManager.CreateAsync(role2);
         //    await _roleManager.CreateAsync(role3);
+        //    await _roleManager.CreateAsync(role4);
         //    return Ok();
         //}
 

@@ -26,12 +26,14 @@ namespace Hospital.Business.Services.Implementations
         private readonly IProfessionRepository _professionRepository;
         private readonly IWorkScheduleRepository _workScheduleRepository;
         private readonly UserManager<AppUser> _userManager;
+		private readonly AppDbContext _context;
 
-        public DoctorService(IDoctorRepository doctorRepository
+		public DoctorService(IDoctorRepository doctorRepository
                             ,IWebHostEnvironment env
                             ,IProfessionRepository professionRepository
                             ,IWorkScheduleRepository workScheduleRepository
                             ,UserManager<AppUser> userManager
+                            ,AppDbContext context
                            )
         {
             _doctorRepository = doctorRepository;
@@ -39,14 +41,15 @@ namespace Hospital.Business.Services.Implementations
           _professionRepository = professionRepository;
            _workScheduleRepository = workScheduleRepository;
            _userManager = userManager;
-        }
+			_context = context;
+		}
         public async Task CreateAsync(Doctor doctor)
         {
-            
 
 
+			
 
-            if (doctor == null)
+			if (doctor == null)
             {
                 throw new EntityNotFoundException();
             }
@@ -108,9 +111,8 @@ namespace Hospital.Business.Services.Implementations
             return existdoctor;
         }
 
-       
-
-        public async Task UpdateAsync(Doctor doctor)
+		
+		public async Task UpdateAsync(Doctor doctor)
         {
             if (doctor == null)
             {

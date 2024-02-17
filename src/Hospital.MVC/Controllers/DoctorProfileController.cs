@@ -1,4 +1,5 @@
-﻿using Hospital.Core.Models;
+﻿using Hospital.Business.Services.Implementations;
+using Hospital.Core.Models;
 using Hospital.Data.DAL;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -12,26 +13,35 @@ namespace Hospital.MVC.Controllers
     {
         private readonly AppDbContext _context;
         private readonly UserManager<AppUser> _userManager;
+		private readonly DoctorService _doctorService;
 
-        public DoctorProfileController(AppDbContext context,UserManager<AppUser>userManager)
+		public DoctorProfileController(AppDbContext context,UserManager<AppUser>userManager
+                                       ,DoctorService doctorService)
         {
             _context = context;
            _userManager = userManager;
-        }
+			_doctorService = doctorService;
+		}
         public async Task<IActionResult> Index()
         {
-            AppUser appUser = null;
+            ViewBag.Doctors=await _context.Doctors.ToListAsync();
+			//var user = await _userManager.GetUserAsync(User);
+			//if (user == null)
+			//{
+			//	return NotFound();
+			//}
 
-            if (HttpContext.User.Identity.IsAuthenticated)
-            {
-                appUser = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
-            }
+			//var doctor = await _context.Doctors
+			//	.Include(d => d.Appointments)
+			//	.FirstOrDefaultAsync(d => d.UserId == user.Id);
 
-            List<Appointment> appointments = await _context.Appointments
-            
-            .ToListAsync();
-            return View(appointments);
+			//if (doctor == null)
+			//{
+			//	return NotFound();
+			//}
 
-        }
+			return View();
+
+		}
     }
 }

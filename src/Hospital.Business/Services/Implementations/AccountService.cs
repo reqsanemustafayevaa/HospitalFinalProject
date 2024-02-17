@@ -23,6 +23,65 @@ namespace Hospital.Business.Services.Implementations
             _userManager = userManager;
             _signInManager = signInManager;
         }
+
+        public async Task DoctorLogin(LoginViewModel loginViewModel)
+        {
+            if (loginViewModel == null) throw new EntityNotFoundException();
+            AppUser doctor = null;
+            doctor = await _userManager.FindByNameAsync(loginViewModel.UserName);
+            if (doctor == null)
+            {
+                throw new InvalidCredsException("", "UserName or Password is incorrect");
+
+            }
+            var result = await _signInManager.PasswordSignInAsync(doctor, loginViewModel.Password, false, false);
+            if (!result.Succeeded)
+            {
+                throw new InvalidCredsException("", "UserName or Password is incorrect");
+            }
+        }
+
+        public async Task DoctorRegister(RegisterViewModel registerViewModel)
+        {
+            AppUser doctor = null;
+
+            doctor = await _userManager.FindByNameAsync(registerViewModel.UserName);
+            if (doctor is not null)
+            {
+                throw new InvalidRegisterOperation("Username", "Username already exist!");
+
+            }
+            doctor = await _userManager.FindByEmailAsync(registerViewModel.Email);
+
+            if (doctor is not null)
+            {
+                throw new InvalidRegisterOperation("Email", "Email already exist!");
+
+            }
+            AppUser appUser = new AppUser
+            {
+                FullName = registerViewModel.Fullname,
+                UserName = registerViewModel.UserName,
+
+
+                Email = registerViewModel.Email,
+
+
+            };
+            var result = await _userManager.CreateAsync(appUser, registerViewModel.Password);
+
+            if (result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    throw new InvalidRegisterOperation("", error.Description);
+
+                }
+            }
+            await _userManager.AddToRoleAsync(appUser, "doctor");
+            await _signInManager.SignInAsync(appUser, isPersistent: false);
+        }
+
         public async Task Login(LoginViewModel loginViewModel)
         {
             if (loginViewModel == null) throw new EntityNotFoundException();

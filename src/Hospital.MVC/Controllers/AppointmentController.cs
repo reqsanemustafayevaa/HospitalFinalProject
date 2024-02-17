@@ -2,12 +2,14 @@
 using Hospital.Core.Models;
 using Hospital.Data.DAL;
 using Hospital.MVC.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hospital.MVC.Controllers
 {
+	[Authorize(Roles ="user")]
 	public class AppointmentController : Controller
 	{
 		private readonly UserManager<AppUser> _userManager;

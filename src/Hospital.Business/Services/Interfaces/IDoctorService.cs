@@ -15,6 +15,8 @@ namespace Hospital.Business.Services.Interfaces
         Task Delete(int id);
         Task<Doctor> GetByIdAsync(int id);
         Task<List<Doctor>> GetAllAsync();
+
+      
         
     }
 }

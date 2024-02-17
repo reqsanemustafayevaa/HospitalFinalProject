@@ -84,8 +84,8 @@ namespace Hospital.MVC.Areas.manage.Controllers
             }
             catch (EntityNotFoundException ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View();
+               
+                return View("error");
             }
             catch (ImageRequiredException ex)
             {
@@ -133,8 +133,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
             }
             catch (EntityNotFoundException ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View();
+               return View("error");
             }
             catch (ImageRequiredException ex)
             {

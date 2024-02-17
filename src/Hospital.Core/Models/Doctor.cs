@@ -47,6 +47,9 @@ namespace Hospital.Core.Models
 
         public List<WorkSchedule>? WorkSchedules { get; set; }
 
+        
+
+     
 
 
 

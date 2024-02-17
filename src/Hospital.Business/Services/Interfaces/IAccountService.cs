@@ -9,8 +9,11 @@ namespace Hospital.Business.Services.Interfaces
 {
     public interface IAccountService
     {
-        Task Login(LoginViewModel loginViewModel);
+        Task Login(LoginViewModel loginViewModel); //user
         Task Logout();
-        Task Register(RegisterViewModel registerViewModel);
+        Task Register(RegisterViewModel registerViewModel); //user
+
+        Task DoctorRegister(RegisterViewModel registerViewModel);
+        Task DoctorLogin(LoginViewModel loginViewModel);
     }
 }
