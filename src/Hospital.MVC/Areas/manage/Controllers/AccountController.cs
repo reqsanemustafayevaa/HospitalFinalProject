@@ -24,7 +24,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
         //    var role1 = new IdentityRole("SuperAdmin");
         //    var role2 = new IdentityRole("Admin");
         //    var role3 = new IdentityRole("user");
-        //    var role4 = new IdentityRole("Doctor");
+        //    var role4 = new IdentityRole("Manager");
         //    await _roleManager.CreateAsync(role1);
         //    await _roleManager.CreateAsync(role2);
         //    await _roleManager.CreateAsync(role3);
@@ -43,6 +43,19 @@ namespace Hospital.MVC.Areas.manage.Controllers
         //    await _userManager.AddToRoleAsync(admin, "SuperAdmin");
         //    return Ok();
         //}
+
+        //public async Task<IActionResult> CreateManager()
+        //{
+        //    var admin = new AppUser
+        //    {
+        //        FullName = "Aytajh Malik",
+        //        UserName = "Manager"
+        //    };
+        //    await _userManager.CreateAsync(admin, "Manager123@");
+        //    await _userManager.AddToRoleAsync(admin, "Manager");
+        //    return Ok();
+        //}
+
         public IActionResult Login()
         {
             return View();
@@ -68,6 +81,32 @@ namespace Hospital.MVC.Areas.manage.Controllers
             }
             return RedirectToAction("Index", "doctor");
         }
+        public IActionResult ManagerLogin()
+        {
+            return View();
+        }
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public async Task<IActionResult> ManagerLogin(LoginViewModel loginViewModel)
+        {
+            if (!ModelState.IsValid) return View(loginViewModel);
+            try
+            {
+                await _accountService.Login(loginViewModel);
+            }
+            catch (InvalidCredentialException ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View(loginViewModel);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View(loginViewModel);
+            }
+            return RedirectToAction("Index", "doctor");
+        }
+
         [HttpGet]
         public async Task<IActionResult> Logout()
         {

@@ -36112,12 +36112,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\1ce43f1d-3bac-4f39-ba5b-d4e5f10c1229team-6.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\2c48a2ae-63c7-4d82-abea-04ad083c45beteam3.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\38231295-15bd-4f07-8f0a-24ad9b0336f2team19.png))">
       <SourceType>Package</SourceType>
       <SourceId>Hospital.MVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Hospital.MVC</BasePath>
-      <RelativePath>uploads/doctors/2c48a2ae-63c7-4d82-abea-04ad083c45beteam3.jpg</RelativePath>
+      <RelativePath>uploads/doctors/38231295-15bd-4f07-8f0a-24ad9b0336f2team19.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36126,7 +36126,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\2c48a2ae-63c7-4d82-abea-04ad083c45beteam3.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\38231295-15bd-4f07-8f0a-24ad9b0336f2team19.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\3994c944-f62a-431a-9c68-9fa6c4eb5a93team-2.jpg))">
       <SourceType>Package</SourceType>

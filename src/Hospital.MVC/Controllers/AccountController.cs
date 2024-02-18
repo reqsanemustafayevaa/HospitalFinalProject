@@ -87,58 +87,8 @@ namespace Hospital.MVC.Controllers
             }
             return RedirectToAction("index", "home");
         }
-        public IActionResult DoctorLogin()
-        {
-            return View();
-        }
-        [HttpPost]
-        [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> DoctorLogin(LoginViewModel loginViewModel)
-        {
-            if (!ModelState.IsValid) return View(loginViewModel);
-            try
-            {
-                await _accountService.Login(loginViewModel);
-            }
-            catch (InvalidCredentialException ex)
-            {
-                ModelState.AddModelError("", ex.Message);
-                return View(loginViewModel);
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.Message);
-                return View(loginViewModel);
-            }
-            return RedirectToAction("index", "doctorprofile");
-        }
-        public IActionResult DoctorRegister()
-        {
-            return View();
-        }
-        [HttpPost]
-        [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> DoctorRegister(RegisterViewModel registerViewModel)
-        {
-            if (!ModelState.IsValid) return View();
-            try
-            {
-                await _accountService.Register(registerViewModel);
-            }
-            catch (InvalidRegisterOperation ex)
-            {
-                ModelState.AddModelError("", ex.Message);
-                return View(registerViewModel);
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.Message);
-                return View(registerViewModel);
-            }
-            return RedirectToAction("index", "home");
 
-        }
-        
+        [Authorize(Roles ="user,SuperAdmin")]
         public async Task<IActionResult> Profile()
         {
             ViewBag.Doctors=_context.Doctors.ToList();

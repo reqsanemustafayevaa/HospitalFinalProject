@@ -13,7 +13,6 @@ namespace Hospital.Business.Services.Interfaces
         Task Logout();
         Task Register(RegisterViewModel registerViewModel); //user
 
-        Task DoctorRegister(RegisterViewModel registerViewModel);
-        Task DoctorLogin(LoginViewModel loginViewModel);
+       
     }
 }

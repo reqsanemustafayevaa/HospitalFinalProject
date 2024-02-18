@@ -1,0 +1,32 @@
+﻿@model Appointment
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container">
+    <h1>Detail</h1>
+    <div class="card">
+        <div class="card-header">
+            Appointment Information
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Appointment ID: @Model.Id</h5>
+            <p class="card-text"><strong>Patient Full Name:</strong> @Model.FullName</p>
+            <p class="card-text"><strong>Patient Username:</strong> @Model.appUser.UserName</p>
+            <p class="card-text"><strong>Patient Email:</strong> @Model.appUser.Email</p>
+            <p class="card-text"><strong>Doctor Full Name:</strong> @Model.Doctor.Fullname</p>
+            <p class="card-text"><strong>Appointment Date:</strong> @Model.AppointmentDate.ToString("MMMM dd, yyyy")</p>
+            <p class="card-text"><strong>Appointment Start Time:</strong> @Model.AppointmentStartTime</p>
+            <p class="card-text"><strong>Appointment End Time:</strong> @Model.AppointmentEndTime</p>
+            <p class="card-text"><strong>Create Date:</strong> @Model.CreateDate.ToString("MMMM dd, yyyy H:mm:ss")</p>
+            <p class="card-text"><strong>Patient Note:</strong> @Model.Note</p>
+        </div>
+        <div class="card-footer text-muted">
+            <a asp-action="Index" asp-controller="ManageAppointment" class="btn btn-info">Go Back </a>
+            <a asp-action="accept" asp-controller="ManageAppointment" asp-route-id="@Model.Id" class="btn btn-success">Accept</a>
+            <a asp-action="reject" asp-controller="ManageAppointment" asp-route-id="@Model.Id" class="btn btn-danger">Reject</a>
+        </div>
+    </div>
+</div>

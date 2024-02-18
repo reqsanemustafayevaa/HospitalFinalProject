@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hospital.MVC.Areas.manage.Controllers
 {
-    [Authorize(Roles = "SuperAdmin")]
+    [Authorize(Roles = "SuperAdmin,Manager")]
     [Area("manage")]
    
     public class DoctorController : Controller
