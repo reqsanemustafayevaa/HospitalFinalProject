@@ -46,7 +46,8 @@ namespace Hospital.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Comment")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");

@@ -44,6 +44,7 @@ namespace Hospital.Core.Models
 
         public AppointmentStatus AppointmentStatus { get; set; }
 
+        [StringLength(maximumLength:60)]
         public string? Comment {  get; set; }
 
 

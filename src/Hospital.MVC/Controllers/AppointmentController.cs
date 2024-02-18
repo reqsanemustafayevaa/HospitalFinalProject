@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hospital.MVC.Controllers
 {
-	[Authorize(Roles ="user,SuperAdmin")]
+	[Authorize(Roles ="user,SuperAdmin,Manager")]
 	public class AppointmentController : Controller
 	{
 		private readonly UserManager<AppUser> _userManager;

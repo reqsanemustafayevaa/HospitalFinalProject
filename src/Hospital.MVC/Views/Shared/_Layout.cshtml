@@ -103,72 +103,51 @@
             </div>
             <div class="header-menu-area header-menu-layout1">
                 <div class="container">
-                    <div class="row no-gutters d-flex align-items-center">
+                    <div class="row no-gutters align-items-center">
                         <div class="col-lg-2 col-md-2 logo-area-layout1">
-                            <a href="index.html" class="temp-logo">
-                                <img src="~/img/logo.png" alt="logo" class="img-fluid">
-                            </a>
+                            <div class="d-flex flex-column">
+                                <a href="@Url.Action("Login", "Account", new { area = "Manage" })" class="btn btn-outline-dark">Admin Login</a>
+                                <div class="d-flex">
+                                    <a asp-action="login" asp-controller="account" class="btn btn-outline-success m-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"></path>
+                                        </svg>
+                                        User Login
+                                    </a>
+                                    <a asp-action="register" asp-controller="account" class="btn btn-outline-success m-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"></path>
+                                        </svg>
+                                        User Register
+                                    </a>
+                                </div>
+
+                                <a href="@Url.Action("ManagerLogin", "Account", new { area = "Manage" })" class="btn btn-outline-info">Manager Login</a>
+
+                            </div>
                         </div>
-                        <div class="col-lg-7 col-md-7 possition-static">
+                        <div class="col-lg-7 col-md-7">
                             <div class="template-main-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li>
-                                            <a asp-action="index" asp-controller="home">Home</a>
-                                            
-                                        </li>
-                                        <li>
-                                            <a href="#">About</a>
-                                          
-                                        </li>                                        
-                                        <li>
-                                            <a href="#">Departments</a>
-                                           
-                                        </li>
-                                        <li>
-                                            <a href="#">Doctors</a>
-                                            
-                                        </li>
-                                        <li class="possition-static hide-on-mobile-menu">
-                                            <a href="#">Pages</a>
-                                           
-                                        </li>
+                                        <li><a asp-action="index" asp-controller="home">Home</a></li>
+                                        <li><a href="#">Departments</a></li>
+                                        <li><a href="#">Doctors</a></li>
+                                        <li class="hide-on-mobile-menu"><a href="#">Pages</a></li>
                                         <li class="hide-on-desktop-menu">
-                                            <a href="#">Pages</a>
+                                            <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
                                             <ul>
-                                                <li>
-                                                    <a href="gallery.html">Gallery</a>
-                                                </li>
-                                                <li>
-                                                    <a href="appointment.html">Appointment</a>
-                                                </li>
-                                                <li>
-                                                    <a href="price-table.html">Price Table</a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop.html">Shop</a>
-                                                </li>
-                                                <li>
-                                                    <a href="single-shop.html">Shop Details</a>
-                                                </li>
-                                                <li>
-                                                    <a href="faq.html">Faq List</a>
-                                                </li>
-                                                <li>
-                                                    <a href="404.html">404 Error</a>
-                                                </li>
-                                                <li>
-                                                    <a href="coming-soon.html">Coming Soon</a>
-                                                </li>
+                                                <li><a href="gallery.html">Gallery</a></li>
+                                                <li><a href="appointment.html">Appointment</a></li>
+                                                <li><a href="price-table.html">Price Table</a></li>
+                                                <li><a href="shop.html">Shop</a></li>
+                                                <li><a href="single-shop.html">Shop Details</a></li>
+                                                <li><a href="faq.html">Faq List</a></li>
+                                                <li><a href="404.html">404 Error</a></li>
+                                                <li><a href="coming-soon.html">Coming Soon</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="#">News</a>
-                                            
-                                        </li>
-                                        <li>
-                                            <a href="#">Contact</a>
-                                        </li>
+                                        <li><a href="#">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -176,23 +155,14 @@
                         <div class="col-lg-3 col-md-3">
                             <div class="header-action-items-layout1">
                                 <ul>
-                                    <li class="d-none d-xl-block">
-                                        <form id="top-search-form" class="header-search-dark">
-                                            <input type="text" class="search-input" placeholder="Search...." required="">
-                                            <button class="search-button">
-                                                <i class="flaticon-search"></i>
-                                            </button>
-                                        </form>
-                                    </li>
-                                    <li>
-                                        <a asp-action="create" asp-controller="appointment" class="action-items-primary-btn">Appointment<i class="fas fa-chevron-right"></i></a>
-                                    </li>
+                                    <li><a asp-action="create" asp-controller="appointment" class="action-items-primary-btn">Appointment <i class="fas fa-chevron-right"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </header>
         <!-- Header Area End Here -->
        @RenderBody()

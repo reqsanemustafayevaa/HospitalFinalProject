@@ -1,4 +1,5 @@
-﻿using Hospital.Core.Models;
+﻿using Hospital.Business.CustomExceptions.CommonExceptions;
+using Hospital.Core.Models;
 using Hospital.Data.DAL;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -60,6 +61,11 @@ namespace Hospital.MVC.Areas.manage.Controllers
             {
                 ModelState.AddModelError("Comment", "Must be written!");
                 return View("detail", appointment);
+            }
+            if (Comment.Length > 60)
+            {
+               
+                return View("reject");
             }
             appointment.Comment = Comment;
             appointment.AppointmentStatus = Core.Enums.AppointmentStatus.Rejected;

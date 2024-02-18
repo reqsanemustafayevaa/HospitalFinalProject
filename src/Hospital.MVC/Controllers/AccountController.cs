@@ -53,7 +53,7 @@ namespace Hospital.MVC.Controllers
 				ModelState.AddModelError("", ex.Message);
 				return View(loginViewModel);
 			}
-			return RedirectToAction("create", "appointment");
+			return RedirectToAction("index", "home");
 		}
 		[HttpGet]
 		public async Task<IActionResult> Logout()
@@ -88,7 +88,7 @@ namespace Hospital.MVC.Controllers
             return RedirectToAction("index", "home");
         }
 
-        [Authorize(Roles ="user,SuperAdmin")]
+        [Authorize(Roles ="user,SuperAdmin,Manager")]
         public async Task<IActionResult> Profile()
         {
             ViewBag.Doctors=_context.Doctors.ToList();
