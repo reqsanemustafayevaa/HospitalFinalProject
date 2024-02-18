@@ -47,14 +47,21 @@ namespace Hospital.MVC.Areas.manage.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("index","ManageAppointment");
 		}
-        public async Task<IActionResult> Reject(int id)
+        [HttpPost]
+        public async Task<IActionResult> Reject(int id,string Comment)
         {
-            Appointment appointment = await _context.Appointments.FirstOrDefaultAsync(x => x.Id == id);
+            ViewBag.Doctors = await _context.Doctors.ToListAsync();
+            Appointment appointment = await _context.Appointments.Include(a => a.appUser).FirstOrDefaultAsync(x => x.Id == id);
             if (appointment == null)
             {
                 return View("error");
             }
-           
+            if (Comment == null)
+            {
+                ModelState.AddModelError("Comment", "Must be written!");
+                return View("detail", appointment);
+            }
+            appointment.Comment = Comment;
             appointment.AppointmentStatus = Core.Enums.AppointmentStatus.Rejected;
             await _context.SaveChangesAsync();
             return RedirectToAction("index", "ManageAppointment");

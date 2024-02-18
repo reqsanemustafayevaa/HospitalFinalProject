@@ -44,6 +44,8 @@ namespace Hospital.Core.Models
 
         public AppointmentStatus AppointmentStatus { get; set; }
 
+        public string? Comment {  get; set; }
+
 
     }
 }

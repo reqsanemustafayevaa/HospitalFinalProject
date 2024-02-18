@@ -37,16 +37,18 @@
                     <td>@item.AppointmentEndTime </td>
                     <td>@item.Doctor.Fullname </td>
                     <td>@item.CreateDate.ToString("MMMM dd, yyyy H:mm:ss")</td>
-                   
-                   
+
+
                     <td>
-                        <span class="badge  text-bg-@(item.AppointmentStatus==AppointmentStatus.Pending? "secondary"
-                        :item.AppointmentStatus==AppointmentStatus.Accepted? "success"
-                        :"danger")" style="padding:0.4rem 0.8rem;font-size:15px">@item.AppointmentStatus</span>
+                        <span title="@item.Comment" data-toggle="tooltip" data-placement="top" class="badge  text-bg-@(item.AppointmentStatus==AppointmentStatus.Pending? "secondary"
+                                     :item.AppointmentStatus==AppointmentStatus.Accepted? "success"
+                                     :"danger")" style="padding:0.4rem 0.8rem;font-size:15px">@item.AppointmentStatus</span>
                     </td>
+
                  
 
                 </tr>
+                <tr>@item.Comment</tr>
 
             }
         </tbody>

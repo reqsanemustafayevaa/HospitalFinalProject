@@ -23,10 +23,16 @@
             <p class="card-text"><strong>Create Date:</strong> @Model.CreateDate.ToString("MMMM dd, yyyy H:mm:ss")</p>
             <p class="card-text"><strong>Patient Note:</strong> @Model.Note</p>
         </div>
+        <form id="manager-comment-form" asp-action="reject" asp-controller="manageAppointment" method="post">
+            <label asp-for="Comment"></label>
+            <input hidden value="@Model.Id" asp-for="Id" />
+            <textarea asp-for="Comment"></textarea>
+            <span asp-validation-for="Comment" style="color:red"></span>
+        </form>
         <div class="card-footer text-muted">
             <a asp-action="Index" asp-controller="ManageAppointment" class="btn btn-info">Go Back </a>
             <a asp-action="accept" asp-controller="ManageAppointment" asp-route-id="@Model.Id" class="btn btn-success">Accept</a>
-            <a asp-action="reject" asp-controller="ManageAppointment" asp-route-id="@Model.Id" class="btn btn-danger">Reject</a>
+            <button type="submit" form="manager-comment-form" class="btn btn-danger">Reject</button>
         </div>
     </div>
 </div>
