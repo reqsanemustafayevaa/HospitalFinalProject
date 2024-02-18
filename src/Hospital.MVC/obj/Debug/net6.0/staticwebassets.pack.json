@@ -1649,6 +1649,10 @@
       "PackagePath": "staticwebassets\\manage\\js\\demo\\datatables-demo.js"
     },
     {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\manage\\js\\main.js",
+      "PackagePath": "staticwebassets\\manage\\js\\main.js"
+    },
+    {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\manage\\js\\sb-admin-2.js",
       "PackagePath": "staticwebassets\\manage\\js\\sb-admin-2.js"
     },
@@ -9043,6 +9047,10 @@
     {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4506fbb6-b203-4195-aad3-7915c2da7650team-6.jpg",
       "PackagePath": "staticwebassets\\uploads\\doctors\\4506fbb6-b203-4195-aad3-7915c2da7650team-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4eb92c8f-bc7f-47e0-a979-8ce1b797c3f6team2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\4eb92c8f-bc7f-47e0-a979-8ce1b797c3f6team2.jpg"
     },
     {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4efd4eed-9045-4738-a62e-c654933219e0team-2.jpg",

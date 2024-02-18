@@ -1,4 +1,5 @@
 ﻿using Hospital.Business.CustomExceptions.CommonExceptions;
+using Hospital.Business.CustomExceptions.ProfessionExceptions;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
 using Hospital.Core.Repositories.Interfaces;
@@ -53,9 +54,9 @@ namespace Hospital.Business.Services.Implementations
            return await _professionRepository.GetAllAsync().ToListAsync();
         }
 
-        public async Task<Profession> GetByIdAsync(int id)
+        public  Task<Profession> GetByIdAsync(int id)
         {
-            var wantedprofession=await _professionRepository.GetAsync(x=>x.Id==id);
+            var wantedprofession= _professionRepository.GetAsync(x=>x.Id==id);
             if (wantedprofession == null)
             {
                 throw new EntityNotFoundException();
@@ -66,10 +67,13 @@ namespace Hospital.Business.Services.Implementations
         public async Task UpdateAsync(Profession profession)
         {
             if(profession is null) { throw new EntityNotFoundException(); }
-            var existprofession=await _professionRepository.GetAsync(x=> x.Id==profession.Id);
+            var existprofession=await _professionRepository.GetAsync(x=> x.Id==profession.Id );
             if (existprofession == null) {  throw new EntityNotFoundException(); }
-            profession.Name = existprofession.Name;
-            profession.Description = existprofession.Description;
+            if (_professionRepository.Table.Any(x => x.Name == profession.Name && x.Id!=profession.Id))
+                throw new ProfessionAllreadyExistException("Name","Profession allready exist!");
+
+            existprofession.Name = profession.Name;
+            existprofession.Description = profession.Description;
           
             profession.IsDeleted = false;
             profession.UpdateDate = DateTime.UtcNow;

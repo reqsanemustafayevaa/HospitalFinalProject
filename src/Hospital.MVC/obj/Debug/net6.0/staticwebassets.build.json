@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qxuts16kSCgbt+NqnDXlGEQehMyCfdeygS1YQWpuTsA=",
+  "Hash": "WZMcBI+YNDctf0RA+xp8orqMVEdymuFIJ66NHpk0N3U=",
   "Source": "Hospital.MVC",
   "BasePath": "_content/Hospital.MVC",
   "Mode": "Default",
@@ -7036,6 +7036,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manage\\js\\demo\\datatables-demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\manage\\js\\main.js",
+      "SourceId": "Hospital.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\",
+      "BasePath": "_content/Hospital.MVC",
+      "RelativePath": "manage/js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\manage\\js\\main.js"
     },
     {
       "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\manage\\js\\sb-admin-2.js",
@@ -38469,6 +38486,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\4506fbb6-b203-4195-aad3-7915c2da7650team-6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4eb92c8f-bc7f-47e0-a979-8ce1b797c3f6team2.jpg",
+      "SourceId": "Hospital.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\",
+      "BasePath": "_content/Hospital.MVC",
+      "RelativePath": "uploads/doctors/4eb92c8f-bc7f-47e0-a979-8ce1b797c3f6team2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\4eb92c8f-bc7f-47e0-a979-8ce1b797c3f6team2.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4efd4eed-9045-4738-a62e-c654933219e0team-2.jpg",
