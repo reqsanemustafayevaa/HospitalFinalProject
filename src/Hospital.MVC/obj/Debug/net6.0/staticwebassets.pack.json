@@ -9029,8 +9029,20 @@
       "PackagePath": "staticwebassets\\style.css"
     },
     {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\0e824e2b-b8ca-439e-befa-475abbc563f6team23.png",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\0e824e2b-b8ca-439e-befa-475abbc563f6team23.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\0fbdff28-f96f-4c63-8ee2-b9a9347801b5team2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\0fbdff28-f96f-4c63-8ee2-b9a9347801b5team2.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\1ce43f1d-3bac-4f39-ba5b-d4e5f10c1229team-6.jpg",
       "PackagePath": "staticwebassets\\uploads\\doctors\\1ce43f1d-3bac-4f39-ba5b-d4e5f10c1229team-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\1f358c06-5f67-4f99-9821-94ed824ce4bbteam1.png",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\1f358c06-5f67-4f99-9821-94ed824ce4bbteam1.png"
     },
     {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\38231295-15bd-4f07-8f0a-24ad9b0336f2team19.png",
@@ -9049,10 +9061,6 @@
       "PackagePath": "staticwebassets\\uploads\\doctors\\4506fbb6-b203-4195-aad3-7915c2da7650team-6.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4eb92c8f-bc7f-47e0-a979-8ce1b797c3f6team2.jpg",
-      "PackagePath": "staticwebassets\\uploads\\doctors\\4eb92c8f-bc7f-47e0-a979-8ce1b797c3f6team2.jpg"
-    },
-    {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\4efd4eed-9045-4738-a62e-c654933219e0team-2.jpg",
       "PackagePath": "staticwebassets\\uploads\\doctors\\4efd4eed-9045-4738-a62e-c654933219e0team-2.jpg"
     },
@@ -9065,8 +9073,16 @@
       "PackagePath": "staticwebassets\\uploads\\doctors\\5bc97994-6a45-4ec3-a6df-4aaa19dd288dteam4.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\61ae0dce-9d24-4875-affa-0006ba173d07team3.png",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\61ae0dce-9d24-4875-affa-0006ba173d07team3.png"
+    },
+    {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\734ef75c-8cc1-433e-ae6c-bf6c956eabb1team-6.jpg",
       "PackagePath": "staticwebassets\\uploads\\doctors\\734ef75c-8cc1-433e-ae6c-bf6c956eabb1team-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\73c0361b-57f7-4278-a1d3-24d1321ada86team4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\73c0361b-57f7-4278-a1d3-24d1321ada86team4.jpg"
     },
     {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\77dba041-cc22-46bc-9db1-84e87c00f757team-6.jpg",
@@ -9079,6 +9095,14 @@
     {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\86854e26-16c7-4071-9d13-0252b594820eteam-2.jpg",
       "PackagePath": "staticwebassets\\uploads\\doctors\\86854e26-16c7-4071-9d13-0252b594820eteam-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\8aff5735-c4c4-4e2b-a822-b2d2ecb6667fteam3.png",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\8aff5735-c4c4-4e2b-a822-b2d2ecb6667fteam3.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\8e77b4f0-4ab4-405f-b48a-329a3a161f53team3.png",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\8e77b4f0-4ab4-405f-b48a-329a3a161f53team3.png"
     },
     {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\97e3ba27-7cfc-46ad-9459-2d8e73e9542dteam-2.jpg",
@@ -9119,6 +9143,10 @@
     {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\e984b86c-9ae4-439d-88e6-50a2b20f8cb1team2.png",
       "PackagePath": "staticwebassets\\uploads\\doctors\\e984b86c-9ae4-439d-88e6-50a2b20f8cb1team2.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\uploads\\doctors\\fdc2a215-b201-42fb-9c79-49022f35d8fbteam4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\fdc2a215-b201-42fb-9c79-49022f35d8fbteam4.jpg"
     },
     {
       "Id": "C:\\Users\\User\\Masaüstü\\HospitalFinalProject\\src\\Hospital.MVC\\wwwroot\\vendor\\OwlCarousel\\owl.carousel.min.css",

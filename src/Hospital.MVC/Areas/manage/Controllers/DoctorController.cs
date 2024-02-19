@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hospital.MVC.Areas.manage.Controllers
 {
-    [Authorize(Roles = "SuperAdmin,Manager")]
+   
     [Area("manage")]
    
     public class DoctorController : Controller
@@ -32,6 +32,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
             _doctorRepository = doctorRepository;
             _userManager = userManager;
         }
+        [Authorize(Roles = "SuperAdmin,Manager")]
         public async Task<IActionResult> Index()
         {
             ViewBag.Professions = _context.Professions.ToList();
@@ -39,6 +40,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
 
             return View(existdoctor);
         }
+        [Authorize(Roles = "SuperAdmin,Manager")]
         public async  Task<IActionResult> Create()
         {
 
@@ -94,6 +96,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
             }
             return RedirectToAction("Index");
         }
+        [Authorize(Roles = "SuperAdmin,Manager")]
         public  async Task<IActionResult> Update(int id)
         {
             ViewBag.Professions = _context.Professions.ToList();
@@ -144,5 +147,8 @@ namespace Hospital.MVC.Areas.manage.Controllers
 
 
         }
+
+      
+      
     }
 }

@@ -286,7 +286,7 @@
                         <img src="~/uploads/doctors/@item.ImageUrl">
                         <ul class="item-icon">
                             <li>
-                                <a href="single-doctor.html">
+                                <a asp-action="detail" asp-controller="doctordetail" asp-route-id="@item.Id">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </li>
@@ -294,7 +294,7 @@
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="single-doctor.html">@item.Fullname</a>
+                            <a asp-action="detail" asp-controller="doctordetail" asp-route-id="@item.Id">@item.Fullname</a>
                         </h3>
                         <p>@item.Profession.Name</p>
                     </div>
@@ -320,15 +320,18 @@
                                         <td>@workSchedule.EndTime</td>
                                     </tr>
                                     }
-                               
+
+                            <a asp-action="detail" asp-controller="doctordetail" asp-route-id="@item.Id" class="btn btn-info btn-lg ">detail</a>
                         </tbody>
+                      
                     </table>
 
                    
                 </div>
+              
             }
 
-           
+            
            
         </div>
     </div>

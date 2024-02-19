@@ -40,7 +40,7 @@ namespace Hospital.MVC.Controllers
 		}
 		[HttpPost]
 		[AutoValidateAntiforgeryToken]
-		public async Task<IActionResult> Create(Business.ViewModels.AppointmentViewModel appointmentViewModel)
+		public async Task<IActionResult> Create(AppointmentViewModel appointmentViewModel)
 		{
             ViewBag.Doctors = await _context.Doctors.ToListAsync();
             ViewBag.Professions = await _context.Professions.ToListAsync();
@@ -124,15 +124,14 @@ namespace Hospital.MVC.Controllers
 			{
 				return false;
 			}
-			
-			if ((model.AppointmentStartTime < doctorSchedule.StartTime || model.AppointmentEndTime > doctorSchedule.EndTime) ||
-				(model.AppointmentStartTime > doctorSchedule.EndTime || model.AppointmentEndTime < doctorSchedule.StartTime))
-			{
-				return false;
-			}
+
+            if ((model.AppointmentStartTime < doctorSchedule.StartTime || model.AppointmentEndTime > doctorSchedule.EndTime) 
+                )
+            {
+                return false;
+            }
+
             return true;
-
-
 
 
 
