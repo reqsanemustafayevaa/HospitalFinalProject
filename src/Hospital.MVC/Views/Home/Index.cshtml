@@ -8,60 +8,31 @@
 <div class="slider-area slider-layout1 bg-light-primary slider-top-margin">
     <div class="bend niceties preview-1">
         <div id="ensign-nivoslider-1" class="slides">
-            <img src="~/img/slider/slide1-1.jpg" alt="slider" title="#slider-direction-1" />
-            <img src="~/img/slider/slide1-2.jpg" alt="slider" title="#slider-direction-2" />
-            <img src="~/img/slider/slide1-3.jpg" alt="slider" title="#slider-direction-3" />
+            @foreach (var slider in Model.Sliders)
+            {
+                <img src="~/uploads/sliders/@slider.ImageUrl" alt="slider" title="#slider-direction-1" />
+            }
+          
+            
         </div>
-        <div id="slider-direction-1" class="t-cn slider-direction">
-            <div class="slider-content s-tb slide-1">
-                <div class="text-left title-container s-tb-c">
-                    <div class="container">
-                        <div class="slider-big-text padding-right">We Take Care Of Your Healthy Health</div>
-                        <p class="slider-paragraph padding-right">
-                            Mimply dummy text of the printing typesetting
-                            ipsum dolor onsecte dipiscing.
-                        </p>
-                        <div class="slider-btn-area">
-                            <a href="#" class="item-btn">Read More<i class="fas fa-chevron-right"></i></a>
+        @foreach(var slider in Model.Sliders)
+        {
+            <div id="slider-direction-1" class="t-cn slider-direction">
+                <div class="slider-content s-tb slide-1">
+                    <div class="text-left title-container s-tb-c">
+                        <div class="container">
+                            <div class="slider-big-text padding-right">@slider.Title</div>
+                            <p class="slider-paragraph padding-right">
+                               @slider.Description
+                            </p>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="slider-direction-2" class="t-cn slider-direction">
-            <div class="slider-content s-tb slide-2">
-                <div class="text-left title-container s-tb-c">
-                    <div class="container">
-                        <div class="slider-big-text padding-right">We Take Care Of Your Healthy Health</div>
-                        <p class="slider-paragraph padding-right">
-                            Mimply dummy text of the printing typesetting
-                            ipsum dolor onsecte
-                            dipiscing.
-                        </p>
-                        <div class="slider-btn-area">
-                            <a href="#" class="item-btn">Read More<i class="fas fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="slider-direction-3" class="t-cn slider-direction">
-            <div class="slider-content s-tb slide-3">
-                <div class="text-left title-container s-tb-c">
-                    <div class="container">
-                        <div class="slider-big-text padding-right">We Take Care Of Your Healthy Health</div>
-                        <p class="slider-paragraph padding-right">
-                            Mimply dummy text of the printing typesetting
-                            ipsum dolor onsecte
-                            dipiscing.
-                        </p>
-                        <div class="slider-btn-area">
-                            <a href="#" class="item-btn">Read More<i class="fas fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        }
+       
+      
     </div>
 </div>
 <!-- Slider Area End Here -->

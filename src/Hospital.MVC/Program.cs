@@ -4,11 +4,13 @@ using Hospital.Business;
 using Hospital.Data;
 using Hospital.Core.Models;
 using Microsoft.AspNetCore.Identity;
+using Hospital.MVC.ViewServices;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddScoped<LayoutService>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("default"));

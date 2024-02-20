@@ -17,6 +17,9 @@ namespace Hospital.Business
             serviceDescriptors.AddScoped<IProfessionService, ProfessionService>();
             serviceDescriptors.AddScoped<IAccountService, AccountService>();
             serviceDescriptors.AddScoped<IAppointmentService, AppointmentService>();
+            serviceDescriptors.AddScoped<ISettingService, SettingService>();
+            serviceDescriptors.AddScoped<ISliderService, SliderService>();
+
 
 
 

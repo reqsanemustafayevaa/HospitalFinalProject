@@ -9,6 +9,7 @@ namespace Hospital.MVC.ViewModels
         public List<Doctor> Doctors { get;set; }
         public List<Profession>Professions { get; set; }
         public List<WorkSchedule> WorkSchedules { get; set; }
+        public List<Slider> Sliders { get; set; }
     }
    
 }

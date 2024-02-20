@@ -1,4 +1,5 @@
 ﻿
+using Hospital.Business.Services.Interfaces;
 using Hospital.Data.DAL;
 using Hospital.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +11,12 @@ namespace Hospital.MVC.Controllers
     public class HomeController : Controller
     {
         private readonly AppDbContext _context;
-        public HomeController(AppDbContext context)
+        private readonly IProfessionService _professionService;
+
+        public HomeController(AppDbContext context,IProfessionService professionService)
         {
             _context = context;
+            _professionService = professionService;
         }
 
 
@@ -24,12 +28,13 @@ namespace Hospital.MVC.Controllers
               
                Professions=_context.Professions.ToList(),
                WorkSchedules=_context.WorkSchedules.ToList(),
+               Sliders = _context.Sliders.ToList(),
 
                 
             };
 
             return View(doctorViewModel);
         }
-        
+      
     }
 }

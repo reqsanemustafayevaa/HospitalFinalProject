@@ -28,7 +28,8 @@ namespace Hospital.Core.Models
         [StringLength(maximumLength: 60, MinimumLength = 16)]
         public string Email { get; set; }
 
-        public decimal Year { get; set; }
+        [StringLength(maximumLength:10,MinimumLength =4)]
+        public string Year { get; set; }
         [StringLength(maximumLength: 25, MinimumLength = 5)]
         public string Degree { get; set; }
         [StringLength(maximumLength: 70, MinimumLength = 3)]

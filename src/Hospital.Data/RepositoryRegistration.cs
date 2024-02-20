@@ -16,6 +16,8 @@ namespace Hospital.Data
             serviceDescriptors.AddScoped<IDoctorRepository, DoctorRepository>();
             serviceDescriptors.AddScoped<IProfessionRepository, ProfessionRepository>();
             serviceDescriptors.AddScoped<IWorkScheduleRepository, WorkScheduleRepository>();
+            serviceDescriptors.AddScoped<ISettingRepository, SettingRepository>();
+            serviceDescriptors.AddScoped<ISliderRepository, SliderRepository>();
 
 
         }
