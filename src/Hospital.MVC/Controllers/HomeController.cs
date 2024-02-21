@@ -1,5 +1,6 @@
 ﻿
 using Hospital.Business.Services.Interfaces;
+using Hospital.Core.Models;
 using Hospital.Data.DAL;
 using Hospital.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;

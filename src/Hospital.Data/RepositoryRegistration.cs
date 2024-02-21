@@ -18,6 +18,8 @@ namespace Hospital.Data
             serviceDescriptors.AddScoped<IWorkScheduleRepository, WorkScheduleRepository>();
             serviceDescriptors.AddScoped<ISettingRepository, SettingRepository>();
             serviceDescriptors.AddScoped<ISliderRepository, SliderRepository>();
+            serviceDescriptors.AddScoped<IAboutRepository, AboutRepository>();
+
 
 
         }

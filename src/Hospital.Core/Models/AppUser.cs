@@ -16,6 +16,7 @@ namespace Hospital.Core.Models
 
       
         public List<Appointment>? Appointments { get; set; }
+      
 
       
     }

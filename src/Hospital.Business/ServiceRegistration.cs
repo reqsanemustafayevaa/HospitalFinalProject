@@ -19,7 +19,7 @@ namespace Hospital.Business
             serviceDescriptors.AddScoped<IAppointmentService, AppointmentService>();
             serviceDescriptors.AddScoped<ISettingService, SettingService>();
             serviceDescriptors.AddScoped<ISliderService, SliderService>();
-
+            serviceDescriptors.AddScoped<IAboutService, AboutService>();
 
 
 
