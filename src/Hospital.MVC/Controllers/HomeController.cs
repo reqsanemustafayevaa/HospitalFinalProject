@@ -30,11 +30,29 @@ namespace Hospital.MVC.Controllers
                Professions=_context.Professions.ToList(),
                WorkSchedules=_context.WorkSchedules.ToList(),
                Sliders = _context.Sliders.ToList(),
+               abouts = _context.Abouts.ToList(),
+               Features = _context.Features.ToList(),
+               Services = _context.Services.ToList(),
+               Testimonials= _context.Testimonials.ToList(),
+              
 
                 
             };
 
             return View(doctorViewModel);
+        }
+        public IActionResult About()
+        {
+            AboutViewModel aboutViewModel = new AboutViewModel()
+            {
+                abouts = _context.Abouts.ToList(),
+                doctors = _context.Doctors.ToList(),
+                professions= _context.Professions.ToList(),
+                workschedules= _context.WorkSchedules.ToList(),
+                aboutResponses=_context.AboutsResponse.ToList(),
+                
+            };
+            return View(aboutViewModel);
         }
       
     }

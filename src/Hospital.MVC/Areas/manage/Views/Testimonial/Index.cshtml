@@ -1,0 +1,51 @@
+﻿
+@model List<Testimonial>
+@{
+    var counter = 0;
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Create</h1>
+        <a asp-action="create" asp-controller="home" class="btn btn-primary">Create</a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+
+                <th scope="col">position</th>
+                <th scope="col">Comment</th>
+
+                <th scope="col">Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var service in Model)
+            {
+                counter++;
+                <tr>
+
+                    <th scope="row">@counter</th>
+                    <td>@service.FullName</td>
+
+                    <td>@service.Position</td>
+                    <td>@service.Comment</td>
+
+
+                    <td><img src="~/uploads/testimonials/@service.ImageUrl" style="max-width:120px" /></td>
+                    <td>
+                        <a asp-action="update" asp-controller="testimonial" asp-route-id="@service.Id" class="btn btn-success">Update</a>
+                        <a asp-action="delete" asp-controller="testimonial" asp-route-id="@service.Id" class="btn btn-danger">delete</a>
+                    </td>
+
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,99 @@
+﻿@model Testimonial
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Testimonial</title>
+    <style>
+        body {
+            background-color: #ffcccc; /* Pembe arka plan rengi */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Yeşil buton rengi */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Testimonial</h1>
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="FullName">Full Name:</label>
+                <input asp-for="FullName" required>
+                <span asp-validation-for="FullName"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Position">Description:</label>
+                <textarea asp-for="Position" required></textarea>
+                <span asp-validation-for="Position"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment">Comment:</label>
+                <textarea asp-for="Comment" required></textarea>
+                <span asp-validation-for="Comment"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile">Image:</label>
+
+                <input asp-for="ImageFile" accept="image/" required>
+                <span asp-validation-for="ImageFile"></span>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

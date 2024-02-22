@@ -14,7 +14,10 @@
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Title</th>
-                <th scope="col">Description</th>
+             
+                <th scope="col">QualityDoctors</th>
+                <th scope="col">HappyPatients</th>
+                <th scope="col">HealthSections</th>
                 <th scope="col">Image</th>
                 <th>Actions</th>
             </tr>
@@ -27,7 +30,10 @@
 
                     <th scope="row">@counter</th>
                     <td>@about.Title</td>
-                    <td>@about.Description</td>
+                   
+                    <td>@about.QualityDoctors</td>
+                    <td>@about.HappyPatients</td>
+                    <td>@about.HealthSections</td>
                     <td><img src="~/uploads/abouts/@about.ImageUrl" style="max-width:120px" /></td>
                     <td>
                         <a asp-action="update" asp-controller="about" asp-route-id="@about.Id" class="btn btn-success">Update</a>

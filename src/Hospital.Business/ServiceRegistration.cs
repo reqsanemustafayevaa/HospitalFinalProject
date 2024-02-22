@@ -20,6 +20,11 @@ namespace Hospital.Business
             serviceDescriptors.AddScoped<ISettingService, SettingService>();
             serviceDescriptors.AddScoped<ISliderService, SliderService>();
             serviceDescriptors.AddScoped<IAboutService, AboutService>();
+            serviceDescriptors.AddScoped<IAboutResponseService, AboutResponseService>();
+            serviceDescriptors.AddScoped<IFeatureService, FeatureService>();
+            serviceDescriptors.AddScoped<IServiceService, ServiceService>();
+            serviceDescriptors.AddScoped<ITestimonialService, TestimonialService>();
+
 
 
 

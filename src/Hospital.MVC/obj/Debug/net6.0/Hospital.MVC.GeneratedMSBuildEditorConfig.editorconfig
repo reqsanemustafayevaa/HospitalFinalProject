@@ -16,8 +16,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\Masaüstü\HospitalFinalProject\src\Hospital.MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/AboutResponse/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEFib3V0UmVzcG9uc2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/AboutResponse/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEFib3V0UmVzcG9uc2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/AboutResponse/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEFib3V0UmVzcG9uc2VcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/About/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEFib3V0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEFib3V0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/About/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEFib3V0XFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Account/Login.cshtml]
@@ -44,6 +64,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXERvY3RvclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Feature/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEZlYXR1cmVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Feature/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEZlYXR1cmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Feature/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEZlYXR1cmVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/ManageAppointment/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXE1hbmFnZUFwcG9pbnRtZW50XERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +94,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Profession/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFByb2Zlc3Npb25cVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Service/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNlcnZpY2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Service/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNlcnZpY2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Service/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNlcnZpY2VcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Setting/Index.cshtml]
@@ -96,6 +140,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNsaWRlclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Testimonial/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFRlc3RpbW9uaWFsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/Testimonial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFRlc3RpbW9uaWFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Areas/manage/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -124,6 +176,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yRGV0YWlsXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -134,6 +190,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Views/Shared/Reject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlamVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Views/Testimonial/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Views/Testimonial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Masaüstü/HospitalFinalProject/src/Hospital.MVC/Views/_ViewImports.cshtml]

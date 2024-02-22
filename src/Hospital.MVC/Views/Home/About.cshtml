@@ -1,0 +1,245 @@
+﻿@model AboutViewModel
+        <!-- Inne Page Banner Area Start Here -->
+        <section class="inner-page-banner bg-common inner-page-top-margin" data-bg-image="~/img/figure/figure2.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumbs-area">
+                            <h1>About Us</h1>
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>About 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Inne Page Banner Area End Here -->
+        <!-- About Us Start Here -->
+        <section class="about-wrap-layout5">
+    @foreach(var item in Model.abouts)
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="about-box-layout13">
+
+                        <h2 class="item-title">
+                           @item.Title
+                            <span>@item.TitleSpan</span>
+                        </h2>
+                        <p>
+                            @item.MainDescription
+                        </p>
+                        <ul class="list-info">
+                           @item.Description
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-box-layout14">
+                        <div class="item-video">
+                            <img src="~/uploads/abouts/@item.ImageUrl" alt="about">
+                            <a class="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM">
+                                <i class="flaticon-play-button"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+           
+        </section>
+        <!-- About Us Area End Here --> 
+     
+        <!-- Progress Area Start Here -->
+        <section class="progress-wrap-layout2 bg-overlay bg-overlay-primary80 bg-common parallaxie" data-bg-image="img/figure/figure1.jpg">
+            <div class="container">
+        @foreach(var item in Model.abouts)
+        {
+            <div class="row">
+
+                <div class="progress-box-layout2 col-md-4">
+                    <div class="inner-item">
+                        <div class="counting-text counter" data-num="@item.HealthSections">@item.HealthSections</div>
+                        <p>Health Sections</p>
+                    </div>
+                </div>
+                <div class="progress-box-layout2 col-md-4">
+                    <div class="inner-item">
+                        <div class="counting-text counter" data-num="@item.HappyPatients">@item.HappyPatients</div>
+                        <p>Happy Patients</p>
+                    </div>
+                </div>
+                <div class="progress-box-layout2 col-md-4">
+                    <div class="inner-item">
+                        <div class="counting-text counter" data-num="@item.QualityDoctors">@item.QualityDoctors</div>
+                        <p>Quality Doctors</p>
+                    </div>
+                </div>
+            </div>
+        }
+      
+            </div>
+        </section>
+        <!-- Progress Area End Here -->
+<!-- Team Area Start Here -->
+
+
+
+<section class="team-wrap-layout1 bg-light-secondary100">
+    <img class="left-img img-fluid" src="~/img/figure/figure4.png" alt="figure">
+    <img class="right-img img-fluid" src="~/img/figure/figure5.png" alt="figure">
+    <div class="container">
+        <div class="section-heading heading-dark text-left heading-layout1">
+            <h2>Specialist Doctors</h2>
+            <p>Experienced Doctor</p>
+            <div id="owl-nav2" class="owl-nav-layout1">
+                <span class="rt-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="rt-next">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </div>
+        </div>
+        <div class="rc-carousel nav-control-layout2" data-loop="true" data-items="4" data-margin="30"
+             data-autoplay="false" data-autoplay-timeout="5000" data-custom-nav="#owl-nav2" data-smart-speed="2000"
+             data-dots="false" data-nav="false" data-nav-speed="false" data-r-x-small="1" data-r-x-small-nav="true"
+             data-r-x-small-dots="false" data-r-x-medium="2" data-r-x-medium-nav="false" data-r-x-medium-dots="false"
+             data-r-small="2" data-r-small-nav="false" data-r-small-dots="false" data-r-medium="3"
+             data-r-medium-nav="false" data-r-medium-dots="false" data-r-large="3" data-r-large-nav="false"
+             data-r-large-dots="false" data-r-extra-large="4" data-r-extra-large-nav="false"
+             data-r-extra-large-dots="false">
+
+            @foreach (var item in Model.doctors)
+            {
+                <div class="team-box-layout2">
+                    <div class="item-img">
+                        <img src="~/uploads/doctors/@item.ImageUrl">
+                        <ul class="item-icon">
+                            <li>
+                                <a asp-action="detail" asp-controller="doctordetail" asp-route-id="@item.Id">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a asp-action="detail" asp-controller="doctordetail" asp-route-id="@item.Id">@item.Fullname</a>
+                        </h3>
+                        <p>@item.Profession.Name</p>
+                    </div>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+
+                                <th>Day</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+
+                            @foreach (var workSchedule in item.WorkSchedules)
+                            {
+                                <tr>
+                                    <td>@workSchedule.Day</td>
+                                    <td>@workSchedule.StartTime</td>
+                                    <td>@workSchedule.EndTime</td>
+                                </tr>
+                            }
+
+                            <a asp-action="detail" asp-controller="doctordetail" asp-route-id="@item.Id" class="btn btn-info btn-lg ">detail</a>
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+
+            }
+
+
+
+        </div>
+    </div>
+</section>
+<!-- Team Area End Here -->
+<!-- Why Choose Area Start Here -->
+        <section class="why-choose-wrap-layout1">
+    @foreach(var item in Model.aboutResponses)
+    {
+        <div class="container">
+            <div class="row">
+                <div class="why-choose-box-layout1 col-lg-6">
+                    <h2 class="item-title">Why People Choose Us?</h2>
+                    <p class="sub-title">We offer extensive medical services for our patients recommend that you use officia.</p>
+                    <div class="choose-list-layout1">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading active">
+                                    <div class="panel-title">
+                                        <a aria-expanded="false" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">@item.Response1</a>
+                                    </div>
+                                </div>
+                                <div aria-expanded="false" id="collapseOne" role="tabpanel" class="panel-collapse collapse show">
+                                    <div class="panel-body">
+                                        <p>
+                                           @item.Description1
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">@item.Response2</a>
+                                    </div>
+                                </div>
+                                <div aria-expanded="false" id="collapseTwo" role="tabpanel" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>
+                                           @item.Description2
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">@item.Response3</a>
+                                    </div>
+                                </div>
+                                <div aria-expanded="false" id="collapseThree" role="tabpanel" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>
+                                           @item.Description3
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-choose-box-layout2 col-lg-6">
+                    <img src="~/uploads/aboutresponse/@item.ImageUrl" alt="about" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    }
+            
+        </section>
+        <!-- Why Choose Area End Here -->
+       
+       
+      

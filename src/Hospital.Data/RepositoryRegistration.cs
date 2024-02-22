@@ -19,6 +19,11 @@ namespace Hospital.Data
             serviceDescriptors.AddScoped<ISettingRepository, SettingRepository>();
             serviceDescriptors.AddScoped<ISliderRepository, SliderRepository>();
             serviceDescriptors.AddScoped<IAboutRepository, AboutRepository>();
+            serviceDescriptors.AddScoped<IAboutResponseRepository, AboutResponseRepository>();
+            serviceDescriptors.AddScoped<IFeatureRepository, FeatureRepository>();
+            serviceDescriptors.AddScoped<IServiceRepository, ServiceRepository>();
+            serviceDescriptors.AddScoped<ITestimonialRepository, TestimonialRepository>();
+
 
 
 
