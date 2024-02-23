@@ -1,23 +1,83 @@
 ﻿@model Profession
 
-<div class="container shadow form-container">
-    <div>
-        <h1 class="title mb-3">Update Profession</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profession</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .title {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .form-input {
+            border-color: #ced4da;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .btn-info {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+
+            .btn-info:hover {
+                background-color: #117a8b;
+                border-color: #117a8b;
+            }
+    </style>
+</head>
+<body>
+    <div class="container shadow form-container">
+        <div>
+            <h1 class="title mb-3">Update Profession</h1>
+        </div>
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Name</label>
+                <input asp-for="Name" type="text" class="form-control form-input" placeholder="Please enter Profession">
+                <span asp-validation-for="Name" style="color:red"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <input asp-for="Description" type="text" class="form-control form-input" placeholder="Please enter Description">
+                <span asp-validation-for="Description" style="color:red"></span>
+            </div>
+
+
+            <button type="submit" class="btn btn-warning">Update</button>
+            <a class="btn btn-info" asp-action="Index" asp-controller="Profession">Back To Home</a>
+        </form>
     </div>
-    <form method="post">
-        <div class="mb-3">
-            <label asp-for="Name" class="form-label">Name</label>
-            <input asp-for="Name" type="text" class="form-control form-input" placeholder="please enter Profession">
-            <span asp-validation-for="Name" style="color:red"></span>
-        </div>
-        <div class="mb-3">
-            <label for="" asp-for="Description" class="form-label">Description</label>
-            <input asp-for="Description" type="text" class="form-control form-input" placeholder="please enter  Description">
-            <span asp-validation-for="Description" style="color:red"></span>
-        </div>
+</body>
+</html>
 
-
-        <button type="submit" class="btn btn-success">update</button>
-        <a class="btn btn-info" asp-action="Index" asp-controller="Profession">Back To Home</a>
-    </form>
-</div>

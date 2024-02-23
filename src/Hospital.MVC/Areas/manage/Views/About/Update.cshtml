@@ -1,51 +1,54 @@
 ﻿@model About
 <form method="post" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label asp-for="Title" class="form-label">Title</label>
-        <input asp-for="Title" class="form-control">
-        <span asp-validation-for="Title" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="TitleSpan" class="form-label">TitleSpan</label>
-        <input asp-for="TitleSpan" class="form-control">
-        <span asp-validation-for="TitleSpan" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Description" class="form-label">Description</label>
-        <input asp-for="Description" class="form-control">
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="MainDescription" class="form-label">MainDescription</label>
-        <input asp-for="MainDescription" class="form-control">
-        <span asp-validation-for="MainDescription" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="HappyPatients" class="form-label">HappyPatients</label>
-        <input asp-for="HappyPatients" class="form-control">
-        <span asp-validation-for="HappyPatients" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="HealthSections" class="form-label">HealthSections</label>
-        <input asp-for="HealthSections" class="form-control">
-        <span asp-validation-for="HealthSections" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="QualityDoctors" class="form-label">QualityDoctors</label>
-        <input asp-for="QualityDoctors" class="form-control">
-        <span asp-validation-for="QualityDoctors" class="text-danger"></span>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">Title</label>
+                    <input asp-for="Title" class="form-control">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="TitleSpan" class="form-label">TitleSpan</label>
+                    <input asp-for="TitleSpan" class="form-control">
+                    <span asp-validation-for="TitleSpan" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">Description</label>
+                    <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="MainDescription" class="form-label">MainDescription</label>
+                    <textarea asp-for="MainDescription" class="form-control" rows="4"></textarea>
+                    <span asp-validation-for="MainDescription" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="HappyPatients" class="form-label">HappyPatients</label>
+                    <input asp-for="HappyPatients" class="form-control">
+                    <span asp-validation-for="HappyPatients" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="HealthSections" class="form-label">HealthSections</label>
+                    <input asp-for="HealthSections" class="form-control">
+                    <span asp-validation-for="HealthSections" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="QualityDoctors" class="form-label">QualityDoctors</label>
+                    <input asp-for="QualityDoctors" class="form-control">
+                    <span asp-validation-for="QualityDoctors" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ImageFile" class="form-label">ImageFile</label>
+                    <input asp-for="ImageFile" class="form-control" type="file">
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
     </div>
 
 
-    <div class="mb-3">
-        <label asp-for="ImageFile" class="form-label">ImageFile</label>
-        <input asp-for="ImageFile" class="form-control">
-        <span asp-validation-for="ImageFile" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-warning">Update</button>
 </form>

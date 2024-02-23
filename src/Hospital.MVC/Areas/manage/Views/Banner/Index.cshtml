@@ -1,0 +1,66 @@
+﻿@model List<Banner>
+@{
+    var counter = 0;
+}
+
+<style>
+    body {
+        background-color: #f0f8ea; 
+    }
+
+    .table {
+        background-color: #d4edda; 
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .table thead th {
+            background-color: #218838; 
+            color: white; 
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #c3e6cb; 
+        }
+
+        .table tbody tr:hover {
+            background-color: #add8e6; 
+        }
+</style>
+
+<div class="container" style="margin-top: 50px;">
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 style="color: #004d00;">Create</h1>
+        <!-- <a asp-action="create" asp-controller="banner" class="btn btn-primary">Create</a> -->
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var banner in Model)
+            {
+                counter++;
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@banner.Title</td>
+                    <td>@banner.Description</td>
+                    <td>@banner.Phone</td>
+                    <td><img src="~/uploads/banners/@banner.ImageUrl" style="max-width:120px" /></td>
+                    <td>
+                        <a asp-action="update" asp-controller="banner" asp-route-id="@banner.Id" class="btn btn-success">Update</a>
+                        <!-- <a asp-action="delete" asp-controller="banner" asp-route-id="@banner.Id" class="btn btn-danger">Delete</a> -->
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

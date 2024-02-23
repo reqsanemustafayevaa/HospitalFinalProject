@@ -10,10 +10,10 @@ namespace Hospital.Core.Models
     public class Setting:BaseEntity
     {
         [StringLength(maximumLength: 50, MinimumLength = 3)]
-        [Required]
-        public string Key { get; set; }
+        
+        public string? Key { get; set; }
         [StringLength(maximumLength: 100, MinimumLength = 3)]
-        [Required]
+       
         public string Value { get; set; }
     }
 }

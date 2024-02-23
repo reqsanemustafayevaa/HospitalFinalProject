@@ -47,7 +47,24 @@
     <link rel="stylesheet" href="~/css/elements.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/style.css">
+    <link href="~/ServiceFor/css/style.css" rel="stylesheet">
     <!-- Modernizr Js -->
+    <!-- Vendor CSS Files -->
+    <link href="~/GalleryFor/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/GalleryFor/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/GalleryFor/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/GalleryFor/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/GalleryFor/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/ServiceFor/plugins/slick/slick.css">
+    <link rel="stylesheet" href="~/ServiceFor/plugins/slick/slick-theme.css">
+    <link rel="icon" href="~/ServiceFor/images/favicon.ico" type="image/x-icon">
+
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="~/ServiceFor/plugins/fancybox/jquery.fancybox.min.css">
+
+    <!-- Template Main CSS File -->
+    <link href="~/GalleryFor/assets/css/main.css" rel="stylesheet">
     <script src="~/js/modernizr-3.5.0.min.js"></script>
 </head>
 
@@ -155,8 +172,8 @@
                     <div class="row">
                         <div class="single-item col-lg-3 col-md-6 col-12">
                             <div class="footer-box">
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="~/img/footerlogo.png" class="img-fluid" alt="footer-logo"></a>
+                                <div >
+                                   <h3 style="color:white","font-size:17px;font-weight:bold">Contact</h3>
                                 </div>
                                 <div class="footer-about">
                                     <p>
@@ -179,16 +196,30 @@
                         <div class="single-item col-lg-3 col-md-6 col-12">
                             <div class="footer-box">
                                 <div class="footer-header">
-                                    <h3>Departments</h3>
+                                    <h3>Department</h3>
                                 </div>
-                                 <div class="footer-departments">
-                                    @* <ul>
+                               @*   <div class="footer-departments">
+                                    <ul>
                                         @foreach (var profession in Model.Professions)
                                         {
-                                            <li style="color: white;">@profession.Name</li>
+                                            <li style="color: white;font-size:17px;">@profession.Name</li>
                                         }
                                        
-                                    </ul> *@
+                                    </ul>
+                                </div> *@
+                            </div>
+                        </div>
+                        <div class="single-item col-lg-3 col-md-6 col-12">
+                            <div class="footer-box">
+                                <div class="footer-header">
+                                    <h3>Reservations</h3>
+                                </div>
+
+                                <div class="footer-opening-hours">
+                                    <ul>
+                                        <li>@Setting.FirstOrDefault(x=>x.Key=="Reservations").Value</li>
+
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -211,10 +242,7 @@
                 </div>
             </section>
            
-            <section class="footer-bottom-wrap">
-                <div class="copyright">Copyright  2018 medilink. All Rights Reserved.<a target="_blank" href="https://www.radiustheme.com/" rel="nofollow">
-                        RadiusTheme</a></div>
-            </section>
+          
         </footer>
         <!-- Footer Area End Here -->
     </div>
@@ -249,6 +277,33 @@
     <script src="~/js/smoothscroll.min.js"></script>
     <!-- Custom Js -->
     <script src="~/js/main.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="~/GalleryFor/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/GalleryFor/assets/vendor/aos/aos.js"></script>
+    <script src="~/GalleryFor/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/GalleryFor/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/GalleryFor/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/GalleryFor/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/GalleryFor/assets/js/main.js"></script>
+    <script src="~/ServiceFor/plugins/jquery.js"></script>
+    <script src="~/ServiceFor/plugins/bootstrap.min.js"></script>
+    <script src="~/ServiceFor/plugins/bootstrap-select.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="~/ServiceFor/plugins/slick/slick.min.js"></script>
+    <!-- FancyBox -->
+    <script src="~/ServiceFor/plugins/fancybox/jquery.fancybox.min.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script src="~/ServiceFor/plugins/google-map/gmap.js"></script>
+
+    <script src="~/ServiceFor/plugins/validate.js"></script>
+    <script src="~/ServiceFor/plugins/wow.js"></script>
+    <script src="~/ServiceFor/plugins/jquery-ui.js"></script>
+    <script src="~/ServiceFor/plugins/timePicker.js"></script>
+    <script src="~/ServiceFor/js/script.js"></script>
+
 
 </body>
 

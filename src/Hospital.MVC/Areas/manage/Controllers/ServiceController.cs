@@ -51,6 +51,11 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
+            catch (InvalidImageFileException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
             return RedirectToAction("Index");
 
         }
@@ -90,12 +95,42 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
+            catch (InvalidImageFileException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
             return RedirectToAction("Index");
 
 
 
 
 
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            var existservice = await _serviceService.GetByIdAsync(id);
+            if (existservice == null)
+            {
+                return View("error");
+
+            }
+            return View(existservice);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(Slider slider)
+        {
+            try
+            {
+                await _serviceService.Delete(slider.Id);
+            }
+            catch (EntityNotFoundException)
+            {
+                return View("error");
+            }
+
+            return RedirectToAction("index");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Hospital.Business.CustomExceptions.CommonExceptions;
 using Hospital.Business.CustomExceptions.ImageExceptions;
+using Hospital.Business.Services.Implementations;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -51,6 +52,11 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
+            catch (InvalidImageFileException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
             return RedirectToAction("Index");
 
         }
@@ -90,12 +96,42 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
+            catch (InvalidImageFileException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
             return RedirectToAction("Index");
 
 
 
 
 
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            var existslider = await _featureService.GetByIdAsync(id);
+            if (existslider == null)
+            {
+                return View("error");
+
+            }
+            return View(existslider);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(Slider slider)
+        {
+            try
+            {
+                await _featureService.Delete(slider.Id);
+            }
+            catch (EntityNotFoundException)
+            {
+                return View("error");
+            }
+
+            return RedirectToAction("index");
         }
     }
 }

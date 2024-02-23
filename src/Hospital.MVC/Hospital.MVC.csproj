@@ -28,6 +28,8 @@
     <Folder Include="wwwroot\uploads\abouts\" />
     <Folder Include="wwwroot\uploads\aboutresponse\" />
     <Folder Include="wwwroot\uploads\features\" />
+    <Folder Include="wwwroot\uploads\galleries\" />
+    <Folder Include="wwwroot\uploads\banners\" />
     <Folder Include="wwwroot\uploads\testimonials\" />
     <Folder Include="wwwroot\uploads\services\" />
     <Folder Include="wwwroot\uploads\sliders\" />

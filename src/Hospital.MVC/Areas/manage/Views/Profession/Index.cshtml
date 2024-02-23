@@ -1,26 +1,50 @@
-﻿﻿
-@model List<Profession>
+﻿@model List<Profession>
 @{
     var counter = 0;
 }
 
+<style>
+    body {
+        background-color: #007bff;
+    }
 
+    .container {
+        margin-top: 20px;
+    }
+
+    .table {
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    th, td {
+        text-align: center;
+    }
+
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn {
+        margin-right: 5px;
+    }
+</style>
 
 <div class="container">
-    <div class="header">
-        <h1 class="title">Professions Table</h1>
-        <a class="btn btn-primary" asp-action="create" asp-controller="profession">Create</a>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Create</h1>
+        <a asp-action="create" asp-controller="profession" class="btn btn-primary">Create</a>
     </div>
 
-    <table class="table table-striped shadow">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
-              
-
-                <th scope="col">Actions</th>
+               
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -31,16 +55,13 @@
                     <th scope="row">@counter</th>
                     <td>@profession.Name</td>
                     <td>@profession.Description</td>
-                   
-
+                 
+                  
                     <td>
-                        <a class="btn btn-warning" asp-action="update" asp-controller="profession" asp-route-id="@profession.Id" >Update</a>
-
-                        <a class="btn btn-danger" asp-action="Delete" asp-controller="profession" asp-route-id="@profession.Id ">Delete</a>
+                        <a asp-action="update" asp-controller="profession" asp-route-id="@profession.Id" class="btn btn-warning">Update</a>
+                        <a asp-action="delete" asp-controller="profession" asp-route-id="@profession.Id" class="btn btn-danger">Delete</a>
                     </td>
-                    
                 </tr>
-                
             }
         </tbody>
     </table>

@@ -24,6 +24,8 @@ namespace Hospital.Business
             serviceDescriptors.AddScoped<IFeatureService, FeatureService>();
             serviceDescriptors.AddScoped<IServiceService, ServiceService>();
             serviceDescriptors.AddScoped<ITestimonialService, TestimonialService>();
+            serviceDescriptors.AddScoped<IGalleryService, GalleryService>();
+            serviceDescriptors.AddScoped<IBannerService, BannerService>();
 
 
 

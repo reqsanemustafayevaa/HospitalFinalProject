@@ -43,6 +43,10 @@ namespace Hospital.Business.Services.Implementations
                 }
                 testimonial.ImageUrl = testimonial.ImageFile.SaveFile(_env.WebRootPath, "uploads/testimonials");
             }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required");
+            }
             testimonial.IsDeleted = false;
             testimonial.CreateDate = DateTime.UtcNow;
             testimonial.UpdateDate = DateTime.UtcNow;

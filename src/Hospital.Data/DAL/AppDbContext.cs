@@ -30,9 +30,12 @@ namespace Hospital.Data.DAL
         public DbSet<Feature> Features { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Testimonial> Testimonials { get; set;}
-       
+        public DbSet<Gallery> Galleries { get; set; }
 
-       
+        public DbSet<Banner> Banners { get; set; }
+
+
+
     }
     
 }

@@ -1,0 +1,21 @@
+﻿@model Service
+<form method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-3" style="margin-top: 20px;">
+                    <img src="~/uploads/services/@Model.ImageUrl" class="card-img-top" alt="Slider Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.Title</h5>
+                        <p class="card-text">@Model.Description</p>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <a asp-action="index" asp-controller="service" class="btn btn-primary">Go Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+}

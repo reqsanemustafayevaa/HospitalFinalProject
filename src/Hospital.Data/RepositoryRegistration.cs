@@ -23,6 +23,8 @@ namespace Hospital.Data
             serviceDescriptors.AddScoped<IFeatureRepository, FeatureRepository>();
             serviceDescriptors.AddScoped<IServiceRepository, ServiceRepository>();
             serviceDescriptors.AddScoped<ITestimonialRepository, TestimonialRepository>();
+            serviceDescriptors.AddScoped<IGalleryRepository, GalleryRepository>();
+            serviceDescriptors.AddScoped<IBannerRepository, BannerRepository>();
 
 
 

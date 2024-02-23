@@ -1,0 +1,12 @@
+﻿@model Gallery
+<form method="post" enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label asp-for="ImageFile" class="form-label">ImageFile</label>
+        <input asp-for="ImageFile" class="form-control">
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-warning">Update</button>
+</form>

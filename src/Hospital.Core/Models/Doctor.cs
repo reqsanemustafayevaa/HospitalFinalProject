@@ -14,14 +14,16 @@ namespace Hospital.Core.Models
     public class Doctor : BaseEntity
     {
         [Required]
-        [StringLength(maximumLength: 100, MinimumLength = 7)]
+        [StringLength(maximumLength: 40, MinimumLength = 7)]
         public string Fullname { get; set; }
 
         [StringLength(maximumLength: 300, MinimumLength = 20)]
         public string Description { get; set; }
         [Required]
-        [StringLength(maximumLength: 40, MinimumLength = 15)]
+        [StringLength(maximumLength: 30, MinimumLength = 10)]
         public string Phone { get; set; }
+        [Required]
+        [StringLength(maximumLength: 30, MinimumLength = 3)]
 
         public string Office { get; set; }
         [Required]
@@ -30,9 +32,9 @@ namespace Hospital.Core.Models
 
         [StringLength(maximumLength:10,MinimumLength =4)]
         public string Year { get; set; }
-        [StringLength(maximumLength: 25, MinimumLength = 5)]
+        [StringLength(maximumLength: 25, MinimumLength = 4)]
         public string Degree { get; set; }
-        [StringLength(maximumLength: 70, MinimumLength = 3)]
+        [StringLength(maximumLength: 70, MinimumLength = 2)]
         public string Institute { get; set; }
 
         [StringLength(maximumLength: 100)]

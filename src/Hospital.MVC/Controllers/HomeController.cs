@@ -34,6 +34,8 @@ namespace Hospital.MVC.Controllers
                Features = _context.Features.ToList(),
                Services = _context.Services.ToList(),
                Testimonials= _context.Testimonials.ToList(),
+               Galleries= _context.Galleries.ToList(),
+               Banners= _context.Banners.ToList(),
               
 
                 

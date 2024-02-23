@@ -14,6 +14,8 @@ namespace Hospital.MVC.ViewModels
         public List<Feature> Features { get; set; }
         public List<Service> Services { get; set; }
         public List<Testimonial> Testimonials { get; set;}
+        public List<Gallery> Galleries { get; set; }
+        public List<Banner> Banners { get; set; }
     }
    
 }

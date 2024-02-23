@@ -43,6 +43,10 @@ namespace Hospital.Business.Services.Implementations
                 }
                 about.ImageUrl = about.ImageFile.SaveFile(_env.WebRootPath, "uploads/abouts");
             }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required!");
+            }
             about.IsDeleted = false;
             about.CreateDate = DateTime.UtcNow;
             about.UpdateDate = DateTime.UtcNow;
@@ -99,6 +103,10 @@ namespace Hospital.Business.Services.Implementations
                 Helper.DeleteFile(_env.WebRootPath, "uploads/abouts", existabout.ImageUrl);
                 existabout.ImageUrl = about.ImageFile.SaveFile(_env.WebRootPath, "uploads/abouts");
             }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required");
+            }
             existabout.Title = about.Title;
             existabout.TitleSpan = about.TitleSpan;
             existabout.Description = about.Description;
@@ -106,6 +114,7 @@ namespace Hospital.Business.Services.Implementations
             existabout.HappyPatients = about.HappyPatients;
             existabout.HealthSections = about.HealthSections;
             existabout.QualityDoctors = about.QualityDoctors;
+            
             existabout.IsDeleted = false;
             existabout.UpdateDate = DateTime.UtcNow;
             await _aboutRepository.CommitAsync();

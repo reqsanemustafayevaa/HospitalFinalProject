@@ -157,54 +157,43 @@
 <!-- Featured Area End Here -->
 
 <!--Service Section-->
-<section class="team-wrap-layout1 bg-light-secondary100">
-    <img class="left-img img-fluid" src="~/img/figure/figure4.png" alt="figure">
-    <img class="right-img img-fluid" src="~/img/figure/figure5.png" alt="figure">
+<section class="service-section bg-gray section">
     <div class="container">
-        <div class="section-heading heading-dark text-left heading-layout1">
-            <h2>Specialist Doctors</h2>
-            <p>Experienced Doctor</p>
-            <div id="owl-nav2" class="owl-nav-layout1">
-                <span class="rt-prev">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="rt-next">
-                    <i class="fas fa-chevron-right"></i>
-                </span>
-            </div>
+        <div class="section-title text-center">
+            <h3>
+                Provided
+                <span>Services</span>
+            </h3>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. qui suscipit atque <br>
+                fugiat officia corporis rerum eaque neque totam animi, sapiente culpa. Architecto!
+            </p>
         </div>
-        <div class="row">
-            @foreach (var service in Model.Services)
+        <div class="row items-container clearfix">
+            @foreach(var item in Model.Services)
             {
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team-box-layout2">
-                        <div class="item-img">
-                            <img src="~/uploads/services/@service.ImageUrl" alt="Team1" class="img-fluid rounded-circle">
-                            <ul class="item-icon">
-                                <li>
-                                    <a href="single-doctor.html">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                <div class="item">
+                    <div class="inner-box">
+                        <div class="img_holder">
+                            <a href="service.html">
+                                <img src="~/uploads/services/@item.ImageUrl" alt="images" class="img-responsive">
+                            </a>
                         </div>
-                        <div class="item-content">
-                            <div class="item-content-overlay"></div>
-                            <div class="item-content-details">
-                                <h3 class="item-title">
-                                    <a href="single-doctor.html">@service.Title</a>
-                                </h3>
-                                <p>@service.Name</p>
-                                <p>@service.Description</p>
-                            </div>
+                        <div class="image-content text-center">
+                            <span>@item.Name</span>
+                            <a href="service.html">
+                                <h6>@item.Title</h6>
+                            </a>
+                            <p>@item.Description</p>
                         </div>
                     </div>
                 </div>
             }
+           
+           
         </div>
     </div>
 </section>
-
 
 
 <!--End Service Section-->
@@ -329,18 +318,46 @@
 </section>
 <!-- Testimonial Area End Here -->
 <!-- Schedule Area End Here -->
+<!-- ======= Gallery Section ======= -->
+<section id="gallery" class="gallery section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h2>gallery</h2>
+            <p>Check <span>Our Gallery</span></p>
+        </div>
+
+        <div class="gallery-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+                @foreach(var item in Model.Galleries)
+                {
+               
+                    <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="~/uploads/galleries/@item.ImageUrl"><img src="~/uploads/galleries/@item.ImageUrl" class="img-fluid" alt=""></a></div>
+               
+                }
+            </div>
+
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section><!-- End Gallery Section -->
 <!-- Banner Area Start Here -->
 <section class="banner-wrap-layout1 parallaxie" data-bg-image="img/figure/figure6.jpg">
     <div class="container">
         <div class="row">
             <div class="col-xl-5 col-lg-8 col-md-10 col-12">
                 <div class="banner-box-layout1">
-                    <h2 class="item-title">For Emergency Cases</h2>
-                    <h3 class="phone-number">1-800-555-0120</h3>
-                    <p>
-                        Building a healthy environment that supports development for the community. Your
-                        personal case manager will ensure that you receive the best possible care.
-                    </p>
+                    @foreach(var item in Model.Banners)
+                    {
+                        <h2 class="item-title">@item.Title</h2>
+                        <h3 class="phone-number">@item.Phone</h3>
+                        <p>
+                            @item.Description
+                        </p>
+                    }
+                  
                 </div>
             </div>
         </div>
@@ -350,29 +367,4 @@
 <!-- Blog and Testimonial Area Start Here -->
 
 <!-- Blog and Testimonial Area End Here -->
-<!-- Call to Action Area Start Here -->
-<section class="call-to-action-wrap-layout4">
-    <div class="item-img">
-        <img src="~/img/figure/figure7.png" alt="figure" class="img-fluid">
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12 col-lg-8 col-md-8 col-12">
-                <div class="call-to-action-box-layout4">
-                    <h2 class="item-title">
-                        We Provide the highest level of satisfaction care &amp; services to
-                        our patients.
-                    </h2>
-                    <div class="call-to-action-phone">
-                        <a href="tel:+12344092888"><i class="fas fa-phone"></i>+123 44092 888</a>
-                    </div>
-                    <div class="call-to-action-btn">
-                        <a href="#" class="item-btn">Make an Appointment</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Call to Action End Here -->

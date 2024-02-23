@@ -43,6 +43,10 @@ namespace Hospital.Business.Services.Implementations
                 }
                 slider.ImageUrl = slider.ImageFile.SaveFile(_env.WebRootPath, "uploads/sliders");
             }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required");
+            }
             slider.IsDeleted = false;
             slider.CreateDate = DateTime.UtcNow;
             slider.UpdateDate = DateTime.UtcNow;
@@ -97,6 +101,10 @@ namespace Hospital.Business.Services.Implementations
                 }
                 Helper.DeleteFile(_env.WebRootPath, "uploads/sliders", existslider.ImageUrl);
                 existslider.ImageUrl = slider.ImageFile.SaveFile(_env.WebRootPath, "uploads/sliders");
+            }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required");
             }
             existslider.Title = slider.Title;
             existslider.Description = slider.Description;

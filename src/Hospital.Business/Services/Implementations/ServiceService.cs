@@ -43,6 +43,10 @@ namespace Hospital.Business.Services.Implementations
                 }
                 service.ImageUrl = service.ImageFile.SaveFile(_env.WebRootPath, "uploads/services");
             }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required");
+            }
             service.IsDeleted = false;
             service.CreateDate = DateTime.UtcNow;
             service.UpdateDate = DateTime.UtcNow;
@@ -98,6 +102,10 @@ namespace Hospital.Business.Services.Implementations
                 }
                 Helper.DeleteFile(_env.WebRootPath, "uploads/services", existservice.ImageUrl);
                 existservice.ImageUrl = service.ImageFile.SaveFile(_env.WebRootPath, "uploads/services");
+            }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required");
             }
             existservice.Title = service.Title;
             existservice.Description = service.Description;

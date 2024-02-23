@@ -1,6 +1,7 @@
 ﻿using Hospital.Business.CustomExceptions.CommonExceptions;
 using Hospital.Business.CustomExceptions.ImageExceptions;
 using Hospital.Business.CustomExceptions.ProfessionExceptions;
+using Hospital.Business.Services.Implementations;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -101,19 +102,28 @@ namespace Hospital.MVC.Areas.manage.Controllers
         }
         public async Task<IActionResult> Delete(int id)
         {
+            var existprofession = await _professionService.GetByIdAsync(id);
+            if (existprofession == null)
+            {
+                return View("error");
+
+            }
+            return View(existprofession);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(Profession profession)
+        {
             try
             {
-                await _professionService.Delete(id);
+                await _professionService.Delete(profession.Id);
             }
-            catch (ProfessionNotFoundException ex)
+            catch (EntityNotFoundException)
             {
                 return View("error");
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            return Ok();
+
+            return RedirectToAction("index");
         }
     }
 }

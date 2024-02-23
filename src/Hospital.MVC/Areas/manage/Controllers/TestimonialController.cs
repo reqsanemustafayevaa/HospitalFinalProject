@@ -2,6 +2,7 @@
 using Hospital.Business.CustomExceptions.ImageExceptions;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hospital.MVC.Areas.manage.Controllers
@@ -15,6 +16,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
         {
             _testimonialService = testimonialService;
         }
+        [Authorize(Roles ="SuperAdmin")]
         public async Task<IActionResult> Index()
         {
             var testimonials = await _testimonialService.GetAllAsync();
@@ -47,6 +49,11 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 return View();
             }
             catch (InvalidImageSizeException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
+            catch (InvalidImageFileException ex)
             {
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();

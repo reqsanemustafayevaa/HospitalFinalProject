@@ -50,6 +50,11 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
+            catch (InvalidImageFileException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
             return RedirectToAction("Index");
 
         }
@@ -85,6 +90,11 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 return View();
             }
             catch (InvalidImageSizeException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
+            catch (InvalidImageFileException ex)
             {
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();

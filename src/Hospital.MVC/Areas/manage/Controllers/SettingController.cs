@@ -18,7 +18,14 @@ namespace Hospital.MVC.Areas.manage.Controllers
         {
             var settings = await _settingService.GetAllAsync();
             return View(settings);
-            return View();
+           
+        }
+        public async Task<IActionResult> Update(int id)
+        {
+            if (id == null) return View("error");
+            var existSetting = await _settingService.GetByIdAsync(x => x.Id == id);
+            if (existSetting == null) return View("error");
+            return View(existSetting);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

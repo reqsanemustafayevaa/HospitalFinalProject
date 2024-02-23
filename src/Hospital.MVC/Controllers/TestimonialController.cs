@@ -1,5 +1,6 @@
 ﻿using Hospital.Business.CustomExceptions.CommonExceptions;
 using Hospital.Business.CustomExceptions.ImageExceptions;
+using Hospital.Business.Services.Implementations;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -18,7 +19,7 @@ namespace Hospital.MVC.Controllers
             _testimonialService = testimonialService;
            _userManager = userManager;
         }
-        [Authorize(Roles ="SuperAdmin")]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Index()
         {
            
@@ -58,6 +59,31 @@ namespace Hospital.MVC.Controllers
             }
             return RedirectToAction("Index", "Home");
 
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            var existcomment = await _testimonialService.GetByIdAsync(id);
+            if (existcomment     == null)
+            {
+                return View("error");
+
+            }
+            return View(existcomment);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(Testimonial testimonial)
+        {
+            try
+            {
+                await _testimonialService.Delete(testimonial.Id);
+            }
+            catch (EntityNotFoundException)
+            {
+                return View("error");
+            }
+
+            return RedirectToAction("index");
         }
     }
 }

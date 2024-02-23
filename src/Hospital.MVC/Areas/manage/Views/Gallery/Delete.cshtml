@@ -1,0 +1,13 @@
+﻿@model Gallery
+<form method="post" enctype="multipart/form-data">
+    <div class="card" style="width: 18rem;">
+        <img src="~/uploads/galleries/@Model.ImageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+            
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-action="index" asp-controller="gallery" class="btn btn-primary">Go home</a>
+        </div>
+    </div>
+</form>
+
+}
