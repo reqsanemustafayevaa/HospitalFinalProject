@@ -2,11 +2,13 @@
 using Hospital.Business.CustomExceptions.ImageExceptions;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hospital.MVC.Areas.manage.Controllers
 {
     [Area("manage")]
+    [Authorize(Roles = "SuperAdmin")]
     public class SliderController : Controller
     {
         private readonly ISliderService _sliderService;

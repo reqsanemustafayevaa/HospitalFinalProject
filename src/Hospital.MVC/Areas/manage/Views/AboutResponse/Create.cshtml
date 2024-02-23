@@ -1,47 +1,67 @@
 ﻿@model AboutResponse
+
 <form method="post" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label asp-for="Response1" class="form-label">Response1</label>
-        <input asp-for="Response1" class="form-control">
-        <span asp-validation-for="Response1" class="text-danger"></span>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label asp-for="Response1" class="form-label">Response1</label>
+                    <input asp-for="Response1" class="form-control" style="background-color: #9575cd; color: #fff;">
+                    <span asp-validation-for="Response1" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label asp-for="Response2" class="form-label">Response2</label>
+                    <input asp-for="Response2" class="form-control" style="background-color: #9575cd; color: #fff;">
+                    <span asp-validation-for="Response2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label asp-for="Response3" class="form-label">Response3</label>
+                    <input asp-for="Response3" class="form-control" style="background-color: #9575cd; color: #fff;">
+                    <span asp-validation-for="Response3" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label asp-for="Description1" class="form-label">Description1</label>
+                    <input asp-for="Description1" class="form-control" style="background-color: #9575cd; color: #fff;">
+                    <span asp-validation-for="Description1" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label asp-for="Description2" class="form-label">Description2</label>
+                    <input asp-for="Description2" class="form-control" style="background-color: #9575cd; color: #fff;">
+                    <span asp-validation-for="Description2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label asp-for="Description3" class="form-label">Description3</label>
+                    <input asp-for="Description3" class="form-control" style="background-color: #9575cd; color: #fff;">
+                    <span asp-validation-for="Description3" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label asp-for="ImageFile" class="form-label">ImageFile</label>
+                    <input asp-for="ImageFile" class="form-control" style="background-color: #9575cd; color: #fff;">
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary" style="background-color: #9575cd;">Create</button>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label asp-for="Response2" class="form-label">Response2</label>
-        <input asp-for="Response2" class="form-control">
-        <span asp-validation-for="Response2" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Response3" class="form-label">Response3</label>
-        <input asp-for="Response3" class="form-control">
-        <span asp-validation-for="Response3" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Description1" class="form-label">Description1</label>
-        <input asp-for="Description1" class="form-control">
-        <span asp-validation-for="Description1" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Description2" class="form-label">Description2</label>
-        <input asp-for="Description2" class="form-control">
-        <span asp-validation-for="Description2" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Description3" class="form-label">Description3</label>
-        <input asp-for="Description3" class="form-control">
-        <span asp-validation-for="Description3" class="text-danger"></span>
-    </div>
-   
-
-
-    <div class="mb-3">
-        <label asp-for="ImageFile" class="form-label">ImageFile</label>
-        <input asp-for="ImageFile" class="form-control">
-        <span asp-validation-for="ImageFile" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Create</button>
 </form>

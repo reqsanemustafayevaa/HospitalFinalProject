@@ -1,6 +1,7 @@
 ﻿using Hospital.Business.CustomExceptions.CommonExceptions;
 using Hospital.Business.CustomExceptions.ImageExceptions;
 using Hospital.Business.CustomExceptions.ProfessionExceptions;
+using Hospital.Business.Services.Implementations;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
 using Hospital.Core.Repositories.Interfaces;
@@ -14,7 +15,8 @@ namespace Hospital.MVC.Areas.manage.Controllers
 {
    
     [Area("manage")]
-   
+    [Authorize(Roles = "SuperAdmin")]
+
     public class DoctorController : Controller
     {
         private readonly IDoctorService _doctorService;
@@ -32,7 +34,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
             _doctorRepository = doctorRepository;
             _userManager = userManager;
         }
-        [Authorize(Roles = "SuperAdmin,Manager")]
+       
         public async Task<IActionResult> Index()
         {
             ViewBag.Professions = _context.Professions.ToList();
@@ -40,7 +42,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
 
             return View(existdoctor);
         }
-        [Authorize(Roles = "SuperAdmin,Manager")]
+      
         public async  Task<IActionResult> Create()
         {
 
@@ -143,12 +145,48 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
+            catch (ArgumentNullException ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View();
+            }
+            catch (Exception )
+            {
+                throw;
+            }
             return RedirectToAction("index");
 
 
         }
+        public async Task<IActionResult> Delete(int id)
+        {
+            ViewBag.Professions = _context.Professions.ToList();
+            var existdoctor = await _doctorService.GetByIdAsync(id);
+            if (existdoctor == null)
+            {
+                return View("error");
 
-      
-      
+            }
+            return View(existdoctor);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(Doctor doctor)
+        {
+            ViewBag.Professions = _context.Professions.ToList();
+            try
+            {
+                await _doctorService.Delete(doctor.Id);
+            }
+            catch (EntityNotFoundException )
+            {
+                return View("error");
+            }
+
+            return RedirectToAction("index");
+        }
+
+
+
     }
 }

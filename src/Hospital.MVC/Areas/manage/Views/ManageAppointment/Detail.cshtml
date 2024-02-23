@@ -3,12 +3,10 @@
     ViewData["Title"] = "Detail";
 }
 
-
-
 <div class="container">
-    <h1>Detail</h1>
-    <div class="card">
-        <div class="card-header">
+    <h1 class="my-4">Detail</h1>
+    <div class="card border-primary">
+        <div class="card-header bg-primary text-white">
             Appointment Information
         </div>
         <div class="card-body">
@@ -24,15 +22,17 @@
             <p class="card-text"><strong>Patient Note:</strong> @Model.Note</p>
         </div>
         <form id="manager-comment-form" asp-action="reject" asp-controller="manageAppointment" method="post">
-            <label asp-for="Comment"></label>
-            <input hidden value="@Model.Id" asp-for="Id" />
-            <textarea asp-for="Comment"></textarea>
-            <span asp-validation-for="Comment" style="color:red"></span>
+            <div class="card-body bg-light">
+                <label asp-for="Comment" class="form-label">Manager Comment:</label>
+                <input hidden value="@Model.Id" asp-for="Id" />
+                <textarea class="form-control" rows="3" asp-for="Comment"></textarea>
+                <span asp-validation-for="Comment" style="color:red"></span>
+            </div>
+            <div class="card-footer text-muted">
+                <a asp-action="Index" asp-controller="ManageAppointment" class="btn btn-outline-info">Go Back</a>
+                <a asp-action="accept" asp-controller="ManageAppointment" asp-route-id="@Model.Id" class="btn btn-outline-success">Accept</a>
+                <button type="submit" form="manager-comment-form" class="btn btn-outline-danger">Reject</button>
+            </div>
         </form>
-        <div class="card-footer text-muted">
-            <a asp-action="Index" asp-controller="ManageAppointment" class="btn btn-info">Go Back </a>
-            <a asp-action="accept" asp-controller="ManageAppointment" asp-route-id="@Model.Id" class="btn btn-success">Accept</a>
-            <button type="submit" form="manager-comment-form" class="btn btn-danger">Reject</button>
-        </div>
     </div>
 </div>

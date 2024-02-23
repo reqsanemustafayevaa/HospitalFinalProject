@@ -20,23 +20,18 @@
         <!-- Inne Page Banner Area End Here -->
         <!-- About Us Start Here -->
         <section class="about-wrap-layout5">
-    @foreach(var item in Model.abouts)
+
+    @foreach (var item in Model.abouts)
     {
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-
                     <div class="about-box-layout13">
 
-                        <h2 class="item-title">
-                           @item.Title
-                            <span>@item.TitleSpan</span>
-                        </h2>
-                        <p>
-                            @item.MainDescription
-                        </p>
+                        <h2 class="item-title">@item.Title <span>@item.TitleSpan</span></h2>
+                        <p >@item.MainDescription</p>
                         <ul class="list-info">
-                           @item.Description
+                            <li style="font-size:20px">@item.Description</li>
                         </ul>
                     </div>
                 </div>
@@ -53,6 +48,7 @@
             </div>
         </div>
     }
+
            
         </section>
         <!-- About Us Area End Here --> 

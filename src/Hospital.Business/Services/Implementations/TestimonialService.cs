@@ -43,10 +43,7 @@ namespace Hospital.Business.Services.Implementations
                 }
                 testimonial.ImageUrl = testimonial.ImageFile.SaveFile(_env.WebRootPath, "uploads/testimonials");
             }
-            else
-            {
-                throw new InvalidImageFileException("ImageFile", "ImageFile is required");
-            }
+           
             testimonial.IsDeleted = false;
             testimonial.CreateDate = DateTime.UtcNow;
             testimonial.UpdateDate = DateTime.UtcNow;
@@ -62,7 +59,11 @@ namespace Hospital.Business.Services.Implementations
             {
                 throw new EntityNotFoundException();
             }
-            Helper.DeleteFile(_env.WebRootPath, "uploads/testimonials", existtestimonial.ImageUrl);
+            if(existtestimonial.ImageFile is not null)
+            {
+                Helper.DeleteFile(_env.WebRootPath, "uploads/testimonials", existtestimonial.ImageUrl);
+            }
+          
             _testimonialRepository.Delete(existtestimonial);
             await _testimonialRepository.CommitAsync();
         }

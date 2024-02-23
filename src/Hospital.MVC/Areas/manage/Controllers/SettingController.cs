@@ -1,11 +1,13 @@
 ﻿using Hospital.Business.CustomExceptions.CommonExceptions;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hospital.MVC.Areas.manage.Controllers
 {
     [Area("manage")]
+    [Authorize(Roles = "SuperAdmin")]
     public class SettingController : Controller
     {
         private readonly ISettingService _settingService;

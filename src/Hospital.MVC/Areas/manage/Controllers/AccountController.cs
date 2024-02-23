@@ -79,7 +79,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError("", ex.Message);
                 return View(loginViewModel);
             }
-            return RedirectToAction("Index", "doctor");
+            return RedirectToAction("Index", "home");
         }
         public IActionResult ManagerLogin()
         {
@@ -104,7 +104,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError("", ex.Message);
                 return View(loginViewModel);
             }
-            return RedirectToAction("Index", "doctor");
+            return RedirectToAction("Index", "ManageAppointment");
         }
 
         [HttpGet]

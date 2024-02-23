@@ -3,11 +3,13 @@ using Hospital.Business.CustomExceptions.ImageExceptions;
 using Hospital.Business.Services.Implementations;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hospital.MVC.Areas.manage.Controllers
 {
     [Area("manage")]
+    [Authorize(Roles = "SuperAdmin")]
     public class GalleryController : Controller
     {
         private readonly IGalleryService _galleryService;

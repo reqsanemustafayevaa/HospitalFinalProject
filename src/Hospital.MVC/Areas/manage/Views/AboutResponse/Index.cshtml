@@ -5,19 +5,17 @@
 
 <div class="container">
     <div class="d-flex justify-content-between align-items-center">
-        <h1>Create</h1>
-        <a asp-action="create" asp-controller="aboutresponse" class="btn btn-primary">Create</a>
+        <h1 style="color: #673ab7;">Create</h1>
+        <a asp-action="create" asp-controller="aboutresponse" class="btn btn-primary" style="background-color: #9c27b0;">Create</a>
     </div>
 
-    <table class="table">
+    <table class="table" style="background-color: #ede7f6; color: #512da8;">
         <thead>
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Response1</th>
-
                 <th scope="col">Response2</th>
                 <th scope="col">Response3</th>
-              
                 <th scope="col">Image</th>
                 <th>Actions</th>
             </tr>
@@ -27,23 +25,17 @@
             {
                 counter++;
                 <tr>
-
                     <th scope="row">@counter</th>
                     <td>@about.Response1</td>
-
                     <td>@about.Response2</td>
                     <td>@about.Response3</td>
-                
                     <td><img src="~/uploads/aboutresponse/@about.ImageUrl" style="max-width:120px" /></td>
                     <td>
-                        <a asp-action="update" asp-controller="aboutresponse" asp-route-id="@about.Id" class="btn btn-success">Update</a>
-                        <a asp-action="delete" asp-controller="aboutresponse" asp-route-id="@about.Id" class="btn btn-danger">delete</a>
+                        <a asp-action="update" asp-controller="aboutresponse" asp-route-id="@about.Id" class="btn btn-success" style="background-color: #673ab7;">Update</a>
+                        <a asp-action="delete" asp-controller="aboutresponse" asp-route-id="@about.Id" class="btn btn-danger" style="background-color: #e91e63;">Delete</a>
                     </td>
-
                 </tr>
             }
-
-
         </tbody>
     </table>
 </div>

@@ -99,6 +99,8 @@ namespace Hospital.Business.Services.Implementations
                 Helper.DeleteFile(_env.WebRootPath, "uploads/banners", existbanner.ImageUrl);
                 existbanner.ImageUrl = banner.ImageFile.SaveFile(_env.WebRootPath, "uploads/banners");
             }
+           
+          
             existbanner.Title = banner.Title;
             existbanner.Description = banner.Description;
             existbanner.Phone = banner.Phone;

@@ -84,22 +84,23 @@ namespace Hospital.MVC.Controllers
             }
 
 
-           
 
 
-			var appointment = new Appointment()
-			{
-				FullName = appointmentViewModel.FullName,
-				Phone = appointmentViewModel.Phone,
-				AppointmentDate = appointmentViewModel.AppointmentDate,
-				AppointmentStartTime = appointmentViewModel.AppointmentStartTime,
-				AppointmentEndTime = appointmentViewModel.AppointmentEndTime,
-				DoctorId = appointmentViewModel.DocotrId,
-				AppUserId = user?.Id,
-				Email = appointmentViewModel.Email,
-				ProfessionId = appointmentViewModel.Professionnid,
-				Note = appointmentViewModel.Note,
-				CreateDate=DateTime.UtcNow.AddHours(4),
+
+            var appointment = new Appointment()
+            {
+                FullName = appointmentViewModel.FullName,
+                Phone = appointmentViewModel.Phone,
+                AppointmentDate = appointmentViewModel.AppointmentDate,
+                AppointmentStartTime = appointmentViewModel.AppointmentStartTime,
+                AppointmentEndTime = appointmentViewModel.AppointmentEndTime,
+                DoctorId = appointmentViewModel.DocotrId,
+                AppUserId = user?.Id,
+                Email = appointmentViewModel.Email,
+                ProfessionId = appointmentViewModel.Professionnid,
+                Note = appointmentViewModel.Note,
+                CreateDate = DateTime.UtcNow.AddHours(4),
+               IsDeleted=false,
 
 				
 			};
@@ -114,29 +115,42 @@ namespace Hospital.MVC.Controllers
 
 			return RedirectToAction("profile", "account");
 		}
-		private async Task<bool> IsAppointmentValid(AppointmentViewModel model)
-		{
-			var doctorSchedule = await _context.WorkSchedules
-		.FirstOrDefaultAsync(ws => ws.DoctorId == model.DocotrId && ws.Day == model.AppointmentDate.DayOfWeek);
+        private async Task<bool> IsAppointmentValid(AppointmentViewModel model)
+        {
+           
+            var doctorSchedule = await _context.WorkSchedules
+                .FirstOrDefaultAsync(ws => ws.DoctorId == model.DocotrId && ws.Day == model.AppointmentDate.DayOfWeek);
 
-
-			if (doctorSchedule == null)
-			{
-				return false;
-			}
-
-            if ((model.AppointmentStartTime < doctorSchedule.StartTime || model.AppointmentEndTime > doctorSchedule.EndTime) 
-                )
+            
+            if (doctorSchedule == null || model.AppointmentDate == null)
             {
                 return false;
             }
 
+           
+            TimeSpan appointmentStartTime = model.AppointmentDate.TimeOfDay.Add(model.AppointmentStartTime);
+            TimeSpan appointmentEndTime = model.AppointmentDate.TimeOfDay.Add(model.AppointmentEndTime);
+
+           
+            if (doctorSchedule.StartTime.Hours >= 6 && doctorSchedule.StartTime.Hours < 12)
+            {
+               
+                if ( appointmentEndTime > doctorSchedule.EndTime)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+               
+                if (appointmentStartTime < doctorSchedule.StartTime || appointmentEndTime > doctorSchedule.EndTime)
+                {
+                    return false;
+                }
+            }
+
             return true;
-
-
-
-
-
         }
-	}
+
+    }
 }

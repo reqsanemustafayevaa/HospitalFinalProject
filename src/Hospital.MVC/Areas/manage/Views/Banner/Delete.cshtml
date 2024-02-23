@@ -1,15 +1,14 @@
 ﻿@model Banner
+
 <form method="post" enctype="multipart/form-data">
-    <div class="card" style="width: 18rem;">
-        <img src="~/uploads/sliders/@Model.ImageUrl" class="card-img-top" alt="...">
+    <div class="card bg-light mx-auto" style="width: 18rem; margin-top: 60px; margin-bottom: 60px;">
+        <img src="~/uploads/banners/@Model.ImageUrl" class="card-img-top" alt="Banner Image">
         <div class="card-body">
-            <h5 class="card-title">@Model.Title</h5>
+            <h5 class="card-title text-success">@Model.Title</h5>
             <p class="card-text">@Model.Description</p>
             <p class="card-text">@Model.Phone</p>
             <button type="submit" class="btn btn-danger">Delete</button>
-            <a asp-action="index" asp-controller="banner" class="btn btn-primary">Go home</a>
+            <a asp-action="index" asp-controller="banner" class="btn btn-primary">Go Home</a>
         </div>
     </div>
 </form>
-
-}

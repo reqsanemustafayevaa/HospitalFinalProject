@@ -130,23 +130,15 @@
                                 <nav id="dropdown">
                                     <ul>
                                         <li><a asp-action="index" asp-controller="home">Home</a></li>
+                                        <li>
+                                            <a asp-action="about" asp-controller="home">About</a>
+                                        </li>
                                         <li><a href="#">Departments</a></li>
                                         <li><a href="#">Doctors</a></li>
-                                        <li class="hide-on-mobile-menu"><a href="#">Pages</a></li>
-                                        <li class="hide-on-desktop-menu">
-                                            <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li><a href="gallery.html">Gallery</a></li>
-                                                <li><a href="appointment.html">Appointment</a></li>
-                                                <li><a href="price-table.html">Price Table</a></li>
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="single-shop.html">Shop Details</a></li>
-                                                <li><a href="faq.html">Faq List</a></li>
-                                                <li><a href="404.html">404 Error</a></li>
-                                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Services</a></li>
+
+                                      
+                                     
                                     </ul>
                                 </nav>
                             </div>
@@ -196,17 +188,15 @@
                         <div class="single-item col-lg-3 col-md-6 col-12">
                             <div class="footer-box">
                                 <div class="footer-header">
-                                    <h3>Department</h3>
+                                    <h3>Ambulance</h3>
                                 </div>
-                               @*   <div class="footer-departments">
+
+                                <div class="footer-opening-hours">
                                     <ul>
-                                        @foreach (var profession in Model.Professions)
-                                        {
-                                            <li style="color: white;font-size:17px;">@profession.Name</li>
-                                        }
-                                       
+                                        <li>@Setting.FirstOrDefault(x=>x.Key=="Ambulance").Value</li>
+
                                     </ul>
-                                </div> *@
+                                </div>
                             </div>
                         </div>
                         <div class="single-item col-lg-3 col-md-6 col-12">

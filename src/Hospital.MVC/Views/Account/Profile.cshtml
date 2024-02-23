@@ -1,55 +1,52 @@
 ﻿@using Hospital.Core.Enums;
 @model List<Appointment>
 @{
-    Layout = null;
     var counter = 0;
+    Layout = null;
 }
-<h1>Profile</h1>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<div class="container" style="border: 1px solid #000; min-height:50vh">
-    <h1>Appointments:</h1>
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Appointment Id</th>
-                <th scope="col">Patient FullName</th>
-                <th scope="col">Appointment Date </th>
-                <th scope="col">Appointment StartTime</th>
-                <th scope="col">Appointment EndTime </th>
-                <th scope="col">Doctor FullName </th>
-                <th scope="col">Created date</th>
-                <th scope="col">Status</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                counter++;
+<div class="container mt-5">
+    
+    <div class="table-responsive">
+        <h2 class="mt-5">Appointments:</h2>
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <th scope="row">@counter</th>
-                    <td>@item.Id</td>
-                    <td>@item.FullName </td>
-                    <td>@item.AppointmentDate.ToString("MMMM dd, yyyy") </td>
-                    <td>@item.AppointmentStartTime </td>
-                    <td>@item.AppointmentEndTime </td>
-                    <td>@item.Doctor.Fullname </td>
-                    <td>@item.CreateDate.ToString("MMMM dd, yyyy H:mm:ss")</td>
-
-
-                    <td>
-                        <span  title="@item.Comment"  class="badge  text-bg-@(item.AppointmentStatus==AppointmentStatus.Pending? "secondary"
-                                     :item.AppointmentStatus==AppointmentStatus.Accepted? "success"
-                                     :"danger")" style="padding:0.4rem 0.8rem;font-size:15px">@item.AppointmentStatus</span>
-                    </td>
-
-                 
-
+                    <th scope="col">No</th>
+                    <th scope="col">Appointment Id</th>
+                    <th scope="col">Patient FullName</th>
+                    <th scope="col">Appointment Date</th>
+                    <th scope="col">Appointment StartTime</th>
+                    <th scope="col">Appointment EndTime</th>
+                    <th scope="col">Doctor FullName</th>
+                    <th scope="col">Created date</th>
+                    <th scope="col">Status</th>
+                    <th></th>
                 </tr>
-              
-
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    counter++;
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@item.Id</td>
+                        <td>@item.FullName</td>
+                        <td>@item.AppointmentDate.ToString("MMMM dd, yyyy")</td>
+                        <td>@item.AppointmentStartTime</td>
+                        <td>@item.AppointmentEndTime</td>
+                        <td>@item.Doctor.Fullname</td>
+                        <td>@item.CreateDate.ToString("MMMM dd, yyyy H:mm:ss")</td>
+                        <td>
+                            <span title="@item.Comment" class="badge text-bg-@(item.AppointmentStatus==AppointmentStatus.Pending? "secondary"
+                                                                         :item.AppointmentStatus==AppointmentStatus.Accepted? "success"
+                                                                         :"danger")" style="padding:0.4rem 0.8rem;font-size:15px">@item.AppointmentStatus</span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

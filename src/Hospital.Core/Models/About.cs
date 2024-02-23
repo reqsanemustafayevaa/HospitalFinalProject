@@ -21,7 +21,7 @@ namespace Hospital.Core.Models
         [StringLength(100)]
         public string MainDescription { get; set; }
         [Required]
-        [StringLength(250)]
+        [StringLength(500)]
         public string Description { get; set; }
         [StringLength(15)]
         [Required]

@@ -108,14 +108,20 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                       
+                        <a class="collapse-item" asp-action="login" asp-controller="account">Login</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="doctor">Doctor</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="profession">Profession</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="service">Service</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="setting">Setting</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="slider">Slider</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="gallery">Gallery</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="banner">Banner</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="about">About</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="aboutresponse">AboutResponse</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="Feature">Login</a>
+
+                       
                     </div>
                 </div>
             </li>

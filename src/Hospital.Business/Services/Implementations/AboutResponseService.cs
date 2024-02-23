@@ -43,6 +43,10 @@ namespace Hospital.Business.Services.Implementations
                 }
                 aboutResponse.ImageUrl = aboutResponse.ImageFile.SaveFile(_env.WebRootPath, "uploads/aboutresponse");
             }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required!");
+            }
             aboutResponse.IsDeleted = false;
             aboutResponse.CreateDate = DateTime.UtcNow;
             aboutResponse.UpdateDate = DateTime.UtcNow;
@@ -98,6 +102,10 @@ namespace Hospital.Business.Services.Implementations
                 }
                 Helper.DeleteFile(_env.WebRootPath, "uploads/abouts", existabout.ImageUrl);
                 existabout.ImageUrl = aboutResponse.ImageFile.SaveFile(_env.WebRootPath, "uploads/aboutresponse");
+            }
+            else
+            {
+                throw new InvalidImageFileException("ImageFile", "ImageFile is required!");
             }
             existabout.Response1 = aboutResponse.Response1;
             existabout.Response2 = aboutResponse.Response2;

@@ -30,7 +30,7 @@ namespace Hospital.Data.Repositories.Implementations
                 throw new NullReferenceException();
             }
 
-            // Kopya bir iş programı listesi oluştur
+          
             doctor.WorkSchedules = new List<WorkSchedule>(doctor.WorkSchedules);
 
             return doctor;

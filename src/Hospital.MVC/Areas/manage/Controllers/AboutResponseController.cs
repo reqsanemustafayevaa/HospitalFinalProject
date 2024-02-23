@@ -2,11 +2,13 @@
 using Hospital.Business.CustomExceptions.ImageExceptions;
 using Hospital.Business.Services.Interfaces;
 using Hospital.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hospital.MVC.Areas.manage.Controllers
 {
     [Area("manage")]
+    [Authorize(Roles = "SuperAdmin")]
     public class AboutResponseController : Controller
     {
         private readonly IAboutResponseService _aboutResponseService;
@@ -51,6 +53,11 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
+            catch (InvalidImageFileException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
             return RedirectToAction("Index");
 
         }
@@ -90,12 +97,42 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
+            catch (InvalidImageFileException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
             return RedirectToAction("Index");
 
 
 
 
 
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            var existabout = await _aboutResponseService.GetByIdAsync(id);
+            if (existabout == null)
+            {
+                return View("error");
+
+            }
+            return View(existabout);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(AboutResponse aboutResponse)
+        {
+            try
+            {
+                await _aboutResponseService.Delete(aboutResponse.Id);
+            }
+            catch (EntityNotFoundException)
+            {
+                return View("error");
+            }
+
+            return RedirectToAction("index");
         }
     }
 }

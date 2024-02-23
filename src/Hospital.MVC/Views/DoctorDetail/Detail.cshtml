@@ -1,7 +1,23 @@
 ﻿@model Doctor
 
-<body >
-    <!-- Preloader Start Here -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <!-- Title -->
+    <title>Doctor Details</title>
+    <!-- Favicon Icon -->
+    <!-- Stylesheets -->
+    <!-- Google Fonts -->
+    <!-- Bootstrap CSS -->
+    <!-- Font Awesome CSS -->
+    <!-- Magnific Popup CSS -->
+    <!-- Owl Carousel CSS -->
+    <!-- Custom CSS -->
+</head>
+
+<body>
     <!-- Doctors Detail Start Here -->
     <section class="team-details-wrap-layout1 bg-light-pink">
         <div class="container">
@@ -29,12 +45,18 @@
                                             <td>@Model.Degree</td>
                                             <td>@Model.Institute</td>
                                         </tr>
-
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-
+                        <div class="widget widget-team-contact">
+                            <h3 class="section-title title-bar-pink">Personal Info</h3>
+                            <ul>
+                                <li>Phone: <span>@Model.Phone</span></li>
+                                <li>Office: <span>@Model.Office</span></li>
+                                <li>E-mail: <span>@Model.Email</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="order-xl-1 order-lg-1 sidebar-widget-area sidebar-break-md col-xl-3 col-lg-4 col-md-12 col-12">
@@ -47,18 +69,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="order-xl-2 order-lg-2 col-xl-9 col-lg-8 col-md-12 col-12">
-                    <div class="widget widget-team-contact">
-                        <h3 class="section-title title-bar-pink">Personal Info</h3>
-                        <ul>
-                            <li>Phone:<span>@Model.Phone</span></li>
-                            <li>Office:<span>@Model.Office</span></li>
-                            <li>E-mail:<span>@Model.Email</span></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
     <!-- Doctors Detail End Here -->
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <!-- Bootstrap JS -->
+    <!-- Magnific Popup JS -->
+    <!-- Owl Carousel JS -->
+    <!-- Custom JS -->
 </body>
+
+</html>

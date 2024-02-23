@@ -1,0 +1,23 @@
+﻿@model AboutResponse
+
+<form method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-3" style="margin-top: 20px;">
+                    <img src="~/uploads/aboutresponse/@Model.ImageUrl" class="card-img-top" alt="Slider Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Description1: @Model.Description1</h5>
+                        <p class="card-text">Response1: @Model.Response1</p>
+                        <h5 class="card-title">Description2: @Model.Description2</h5>
+                        <p class="card-text">Response2: @Model.Response2</p>
+                        <h5 class="card-title">Description3: @Model.Description3</h5>
+                        <p class="card-text">Response3: @Model.Response3</p>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <a asp-action="index" asp-controller="aboutresponse" class="btn btn-primary">Go Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
