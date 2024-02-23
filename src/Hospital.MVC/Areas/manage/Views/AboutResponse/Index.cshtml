@@ -6,7 +6,7 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center">
         <h1 style="color: #673ab7;">Create</h1>
-        <a asp-action="create" asp-controller="aboutresponse" class="btn btn-primary" style="background-color: #9c27b0;">Create</a>
+      @*   <a asp-action="create" asp-controller="aboutresponse" class="btn btn-primary" style="background-color: #9c27b0;">Create</a> *@
     </div>
 
     <table class="table" style="background-color: #ede7f6; color: #512da8;">
@@ -32,7 +32,7 @@
                     <td><img src="~/uploads/aboutresponse/@about.ImageUrl" style="max-width:120px" /></td>
                     <td>
                         <a asp-action="update" asp-controller="aboutresponse" asp-route-id="@about.Id" class="btn btn-success" style="background-color: #673ab7;">Update</a>
-                        <a asp-action="delete" asp-controller="aboutresponse" asp-route-id="@about.Id" class="btn btn-danger" style="background-color: #e91e63;">Delete</a>
+                       @*  <a asp-action="delete" asp-controller="aboutresponse" asp-route-id="@about.Id" class="btn btn-danger" style="background-color: #e91e63;">Delete</a> *@
                     </td>
                 </tr>
             }
