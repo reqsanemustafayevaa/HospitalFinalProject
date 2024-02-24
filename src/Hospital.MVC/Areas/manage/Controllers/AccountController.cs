@@ -79,7 +79,7 @@ namespace Hospital.MVC.Areas.manage.Controllers
                 ModelState.AddModelError("", ex.Message);
                 return View(loginViewModel);
             }
-            return RedirectToAction("Index", "home");
+            return RedirectToAction("Index", "dashboard");
         }
         public IActionResult ManagerLogin()
         {
